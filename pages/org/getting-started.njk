@@ -1,0 +1,11 @@
+---
+pagination:
+  data: orgs
+  size: 1
+  alias: org
+layout: base.njk
+eleventyComputed:
+  title: "Getting Started"
+  permalink: "/{{ org.slug }}/getting-started/"
+---
+{% include "content/getting-started.njk" %}

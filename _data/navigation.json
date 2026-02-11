@@ -1,6 +1,6 @@
 [
   { "label": "Home", "url": "/" },
-  { "label": "Boundaries", "url": "/boundaries/" },
+  { "label": "AI Boundaries", "url": "/boundaries/" },
   { "label": "Getting Started", "url": "/getting-started/" },
   { "label": "Resources", "url": "/resources/" }
 ]

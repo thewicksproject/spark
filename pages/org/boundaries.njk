@@ -1,0 +1,11 @@
+---
+pagination:
+  data: orgs
+  size: 1
+  alias: org
+layout: base.njk
+eleventyComputed:
+  title: "AI Boundaries"
+  permalink: "/{{ org.slug }}/boundaries/"
+---
+{% include "content/boundaries.njk" %}

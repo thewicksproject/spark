@@ -39,15 +39,15 @@
 
   "navigation": [
     { "label": "Home", "url": "/rfy/" },
-    { "label": "Boundaries", "url": "/boundaries/" },
-    { "label": "Getting Started", "url": "/getting-started/" },
+    { "label": "AI Boundaries", "url": "/rfy/boundaries/" },
+    { "label": "Getting Started", "url": "/rfy/getting-started/" },
     { "label": "Prompts", "url": "/rfy/prompts/" },
     { "label": "Website Guide", "url": "/rfy/website-guide/" },
-    { "label": "Resources", "url": "/resources/" }
+    { "label": "Resources", "url": "/rfy/resources/" }
   ],
 
   "quickLinks": [
-    { "label": "RFY Website", "url": "https://rfy.thewicksproject.org" },
+    { "label": "RFY Demo Website", "url": "https://rfy.thewicksproject.org" },
     { "label": "RFY Website CMS", "url": "https://rfy.thewicksproject.org/admin/" },
     { "label": "Claude Desktop Download", "url": "https://claude.ai/download" },
     { "label": "GitHub Sign Up", "url": "https://github.com/signup" }
@@ -189,7 +189,7 @@
       {
         "step": 2,
         "title": "Open the CMS",
-        "description": "Go to the CMS in your browser. Click \"Login with GitHub\" and authorize access."
+        "description": "Go to the CMS in your browser. Click \"Login with GitHub\" and authorize access. First time? You may also need to grant org access — see Troubleshooting below."
       },
       {
         "step": 3,
@@ -238,6 +238,10 @@
       {
         "problem": "Published the wrong content",
         "solution": "Don't worry — Victor can revert any change. Just let him know."
+      },
+      {
+        "problem": "Publish fails or CMS is read-only",
+        "solution": "Go to GitHub Settings → Applications → 'RFY Website CMS' → click 'Grant' for thewicksproject. Log out of the CMS and back in."
       }
     ]
   },

@@ -1,0 +1,11 @@
+---
+pagination:
+  data: orgs
+  size: 1
+  alias: org
+layout: base.njk
+eleventyComputed:
+  title: "Resources"
+  permalink: "/{{ org.slug }}/resources/"
+---
+{% include "content/resources.njk" %}

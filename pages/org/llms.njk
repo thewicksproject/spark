@@ -1,0 +1,84 @@
+---
+pagination:
+  data: orgs
+  size: 1
+  alias: org
+layout: false
+eleventyComputed:
+  title: "LLMs Context"
+  permalink: "/{{ org.slug }}/llms.txt"
+---
+# Spark Training — {{ org.fullName | safe }}
+
+> AI training resources for mission-driven organizations
+
+## About This Training
+
+- Organization: {{ org.fullName | safe }} ({{ org.name | safe }})
+- Session: {{ org.session.title | safe }}
+- Duration: {{ org.session.duration | safe }}
+- Audience: {{ org.session.audience | safe }}
+- Website: {{ org.siteUrl }}
+- CMS: {{ org.cmsUrl }}
+
+## Session Structure
+{% for beat in org.session.beats %}
+{{ beat.number }}. {{ beat.title | safe }} ({{ beat.duration | safe }}) — {{ beat.description | safe }}
+{%- endfor %}
+
+## AI Use Boundaries (Traffic Light)
+
+### {{ boundaries.green.label | safe }}
+{{ boundaries.green.description | safe }}
+{% for item in boundaries.green.items %}- {{ item | safe }}
+{% endfor %}
+### {{ boundaries.yellow.label | safe }}
+{{ boundaries.yellow.description | safe }}
+{% for item in boundaries.yellow.items %}- {{ item | safe }}
+{% endfor %}
+Yellow Zone Process:
+{% for step in boundaries.yellow.process %}{{ loop.index }}. {{ step | safe }}
+{% endfor %}
+### {{ boundaries.red.label | safe }}
+{{ boundaries.red.description | safe }}
+{% for item in boundaries.red.items %}- {{ item | safe }}
+{% endfor %}
+### Decision Tree
+1. {{ boundaries.decisionTree.question1 | safe }} → YES = {{ boundaries.decisionTree.answer1yes | safe }}
+2. {{ boundaries.decisionTree.question2 | safe }} → YES = {{ boundaries.decisionTree.answer2yes | safe }}
+3. {{ boundaries.decisionTree.question3 | safe }} → YES = {{ boundaries.decisionTree.answer3yes | safe }}
+
+### PII — Never Enter Into AI Tools
+{% for item in boundaries.pii.neverEnter %}- {{ item | safe }}
+{% endfor %}
+### Incident Response
+{% for step in boundaries.incident.steps %}{{ loop.index }}. {{ step | safe }}
+{% endfor %}{{ boundaries.incident.note | safe }}
+
+## CMS Workflow
+{% for step in org.websiteGuide.workflow %}
+{{ step.step }}. {{ step.title | safe }} — {{ step.description | safe }}
+{%- endfor %}
+
+## Available Starter Prompts
+{% for category in org.prompts.categories %}
+### {{ category.name | safe }}
+{% for prompt in category.prompts %}- {{ prompt.title | safe }}{% if prompt.cmsSection %} (CMS: {{ prompt.cmsSection | safe }}){% endif %}
+{% endfor %}
+{%- endfor %}
+
+## Key URLs
+
+- Spark training site: https://spark.thewicksproject.org/{{ org.slug }}/
+- {{ org.fullName | safe }} website: {{ org.siteUrl }}
+- CMS: {{ org.cmsUrl }}
+- Claude Desktop download: https://claude.ai/download
+- AI Fluency for Nonprofits course: https://anthropic.skilljar.com/ai-fluency-for-nonprofits
+
+## Important Reminders
+
+- Never enter client names, case notes, PII, or any identifying information into AI tools
+- All external-facing content drafted with AI needs supervisor review before sending
+- AI output is a first draft — always review, edit, and verify before using
+- If PII is accidentally entered: stop immediately, document it, tell your supervisor within 24 hours
+- When in doubt, check the traffic light card or ask your team lead

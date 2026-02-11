@@ -75,14 +75,6 @@
   ],
   "quickLinks": [
     {
-      "label": "RFY Website",
-      "url": "https://rfy.thewicksproject.org"
-    },
-    {
-      "label": "RFY Website CMS",
-      "url": "https://rfy.thewicksproject.org/admin/"
-    },
-    {
       "label": "Claude Desktop Download",
       "url": "https://claude.ai/download"
     },
