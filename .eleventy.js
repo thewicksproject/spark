@@ -3,6 +3,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_headers");
   eleventyConfig.addPassthroughCopy("robots.txt");
 
+  // Exclude .claude skill files from build
+  eleventyConfig.ignores.add(".claude/**");
+
   eleventyConfig.addWatchTarget("css/");
 
   return {

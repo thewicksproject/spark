@@ -321,7 +321,7 @@ section {
     line-height: 1.5;
 }
 
-.tl-card li::before {
+.tl-card ul li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -331,9 +331,21 @@ section {
     border-radius: 50%;
 }
 
-.tl-green li::before { background: var(--green); }
-.tl-yellow li::before { background: var(--yellow); }
-.tl-red li::before { background: var(--red); }
+.tl-card ol {
+    list-style: decimal;
+}
+
+.tl-card ol li {
+    padding-left: 0;
+}
+
+.tl-card ol li::before {
+    display: none;
+}
+
+.tl-green ul li::before { background: var(--green); }
+.tl-yellow ul li::before { background: var(--yellow); }
+.tl-red ul li::before { background: var(--red); }
 
 /* Decision Tree */
 .decision-tree {
