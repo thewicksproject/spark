@@ -7,7 +7,8 @@
     "question2": "Will this go outside the organization?",
     "answer2yes": "YELLOW — Get a second pair of eyes before sending.",
     "question3": "Is this internal admin work?",
-    "answer3yes": "GREEN — Go ahead."
+    "answer3yes": "GREEN — Go ahead.",
+    "fallback": "Ask your team lead or check the traffic light card."
   },
   "green": {
     "label": "GREEN — Go Ahead",
@@ -20,8 +21,8 @@
       "Calendar scheduling help",
       "Research summaries (public sources)",
       "Training material organization",
-      "Grant writing assistance",
-      "Website content updates"
+      "Grant writing assistance (drafting stage)",
+      "Website content updates (review before publishing)"
     ]
   },
   "yellow": {

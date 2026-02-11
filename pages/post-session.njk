@@ -91,6 +91,26 @@ permalink: /post-session/
         <h2>7. Follow-up actions</h2>
         <div class="prompt">Who needs what? Additional access, training, resources, 1:1 time?</div>
         <textarea placeholder="Follow-up actions..."></textarea>
+
+        <button onclick="copyAll()" style="margin-top:1.5rem;background:#DEBA85;color:white;border:none;padding:0.6rem 1.5rem;border-radius:6px;font-size:15px;cursor:pointer;font-weight:600;display:block;width:100%;">Copy All to Clipboard</button>
+        <script>
+        function copyAll(){
+            const sections=document.querySelectorAll('h2');
+            let text='POST-SESSION CAPTURE\n'+('='.repeat(40))+'\n\n';
+            sections.forEach(h2=>{
+                const ta=h2.nextElementSibling&&h2.nextElementSibling.nextElementSibling;
+                if(ta&&ta.tagName==='TEXTAREA'){
+                    text+=h2.textContent.trim()+'\n'+ta.value.trim()+'\n\n';
+                }
+            });
+            navigator.clipboard.writeText(text.trim()).then(()=>{
+                const btn=document.querySelector('button[onclick="copyAll()"]');
+                const orig=btn.textContent;
+                btn.textContent='Copied!';
+                setTimeout(()=>btn.textContent=orig,2000);
+            });
+        }
+        </script>
     </div>
 </body>
 </html>

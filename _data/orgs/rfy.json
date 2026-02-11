@@ -12,24 +12,30 @@
     "beats": [
       {
         "number": 1,
+        "title": "Welcome",
+        "duration": "2 min",
+        "description": "Quick hello, agenda overview, and housekeeping."
+      },
+      {
+        "number": 2,
         "title": "Boundaries",
         "duration": "8 min",
         "description": "The traffic light card — what's safe, what needs review, what's off-limits."
       },
       {
-        "number": 2,
+        "number": 3,
         "title": "Watch This",
         "duration": "10 min",
         "description": "Live demo: updating the RFY website with Claude in real time."
       },
       {
-        "number": 3,
+        "number": 4,
         "title": "Your Turn",
         "duration": "35 min",
         "description": "Everyone updates the RFY website — draft with Claude, publish through the CMS."
       },
       {
-        "number": 4,
+        "number": 5,
         "title": "Your Own Work",
         "duration": "35 min",
         "description": "Apply what you've learned to your own projects, then share what you built."
@@ -43,6 +49,7 @@
     { "label": "Getting Started", "url": "/rfy/getting-started/" },
     { "label": "Prompts", "url": "/rfy/prompts/" },
     { "label": "Website Guide", "url": "/rfy/website-guide/" },
+    { "label": "CMS Walkthrough", "url": "/rfy/walkthrough/" },
     { "label": "Resources", "url": "/rfy/resources/" }
   ],
 
@@ -161,7 +168,6 @@
 
   "websiteGuide": {
     "title": "Website Update Guide",
-    "subtitle": "How to update the RFY website using Claude and the CMS.",
     "overview": "The workflow has two parts: draft content with Claude, then publish it through the CMS. No coding, no terminal, no technical skills required.",
     "prerequisites": [
       {
@@ -261,7 +267,7 @@
     "verificationDate": "February 11, 2026",
     "verificationChecks": [
       { "check": "CMS login via GitHub OAuth", "result": "Verified — login, read, and write all working" },
-      { "check": "CMS sidebar labels match Website Guide", "result": "Verified — all 10 sections match" },
+      { "check": "CMS sidebar labels match Website Guide", "result": "Verified — all 7 sidebar collections verified against CMS" },
       { "check": "Publish volunteer opportunity via CMS", "result": "Verified — \"Youth Workshop Facilitator\" published and appeared on live site" },
       { "check": "Starter prompts produce CMS-ready output", "result": "Verified — statistics, timeline, volunteer, and program description prompts all map to CMS fields" },
       { "check": "All Spark site pages render correctly", "result": "Verified — all 8 pages pass visual check" },
@@ -294,10 +300,10 @@
       }
     ],
     "links": [
-      { "label": "AI Fluency for Nonprofits", "url": "anthropic.skilljar.com/ai-fluency-for-nonprofits" },
-      { "label": "Claude 101", "url": "anthropic.skilljar.com/claude-101" },
-      { "label": "Website CMS", "url": "rfy.thewicksproject.org/admin/" },
-      { "label": "Training Resources", "url": "spark.thewicksproject.org" }
+      { "label": "AI Fluency for Nonprofits", "url": "https://anthropic.skilljar.com/ai-fluency-for-nonprofits" },
+      { "label": "Claude 101", "url": "https://anthropic.skilljar.com/claude-101" },
+      { "label": "Website CMS", "url": "https://rfy.thewicksproject.org/admin/" },
+      { "label": "Training Resources", "url": "https://spark.thewicksproject.org" }
     ]
   }
 }

@@ -47,6 +47,7 @@ Yellow Zone Process:
 1. {{ boundaries.decisionTree.question1 | safe }} → YES = {{ boundaries.decisionTree.answer1yes | safe }}
 2. {{ boundaries.decisionTree.question2 | safe }} → YES = {{ boundaries.decisionTree.answer2yes | safe }}
 3. {{ boundaries.decisionTree.question3 | safe }} → YES = {{ boundaries.decisionTree.answer3yes | safe }}
+4. None of the above? → {{ boundaries.decisionTree.fallback | safe }}
 
 ### PII — Never Enter Into AI Tools
 {% for item in boundaries.pii.neverEnter %}- {{ item | safe }}

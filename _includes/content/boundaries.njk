@@ -36,6 +36,12 @@
                 <span class="decision-arrow">&rarr; YES &rarr;</span>
                 <span style="color: var(--green); font-weight: 600;">{{ boundaries.decisionTree.answer3yes }}</span>
             </div>
+            <div class="decision-step">
+                <span class="decision-arrow">&rarr; NO &darr;</span>
+            </div>
+            <div class="decision-step">
+                <span style="color: var(--steel-blue); font-weight: 600;">{{ boundaries.decisionTree.fallback }}</span>
+            </div>
         </div>
     </div>
 </section>
@@ -43,7 +49,7 @@
 <section class="section--alt">
     <div class="container">
         <h2>Traffic Light Card</h2>
-        <p>Print this out and keep it at your desk. <button onclick="window.print()" class="copy-btn no-print" style="position:static; display:inline-block;">Print this page</button></p>
+        <p>Print this out and keep it at your desk. <a href="/{{ org.slug }}/one-pager/" class="copy-btn no-print" style="position:static; display:inline-block; text-decoration: none;">Print one-pager</a></p>
 
         <div class="traffic-light">
             <div class="tl-card tl-green">
