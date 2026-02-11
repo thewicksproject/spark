@@ -58,7 +58,12 @@ permalink: /resources/
         <h2>Quick Links</h2>
         <div class="quick-links">
             {% for link in resources.quickLinks %}
+            {% if not link.label.startsWith("RFY") %}
             <a href="{{ link.url }}" class="quick-link">{{ link.label }}</a>
+            {% endif %}
+            {% endfor %}
+            {% for org in orgs %}
+            <a href="/{{ org.slug }}/" class="quick-link">{{ org.fullName }}</a>
             {% endfor %}
         </div>
     </div>

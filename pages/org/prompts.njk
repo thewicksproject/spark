@@ -1,0 +1,44 @@
+---
+pagination:
+  data: orgs
+  size: 1
+  alias: org
+layout: base.njk
+eleventyComputed:
+  title: "Starter Prompts"
+  permalink: "/{{ org.slug }}/prompts/"
+---
+
+<div class="page-header">
+    <div class="container">
+        <h1>{{ org.prompts.title }}</h1>
+        <p>{{ org.prompts.subtitle }}</p>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        {% for category in org.prompts.categories %}
+        <div class="prompt-category">
+            <h3>{{ category.name }}</h3>
+
+            {% for prompt in category.prompts %}
+            <div class="prompt-card{% if category.id == 'website' and loop.first %} open{% endif %}">
+                <div class="prompt-card-header">
+                    <div>
+                        <h4>{{ prompt.title }}</h4>
+                        {% if prompt.cmsSection %}
+                        <span class="prompt-card-meta">CMS: {{ prompt.cmsSection }}</span>
+                        {% endif %}
+                    </div>
+                    <span class="chevron">&#9660;</span>
+                </div>
+                <div class="prompt-card-body">
+                    <div class="prompt-text"><button class="copy-btn">Copy</button><code>{{ prompt.prompt }}</code></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</section>

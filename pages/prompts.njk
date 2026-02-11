@@ -1,40 +1,14 @@
 ---
-layout: base.njk
-title: Starter Prompts
-description: Copy-paste prompts to get started with Claude for common tasks.
+layout: false
 permalink: /prompts/
 ---
-
-<div class="page-header">
-    <div class="container">
-        <h1>{{ prompts.title }}</h1>
-        <p>{{ prompts.subtitle }}</p>
-    </div>
-</div>
-
-<section>
-    <div class="container">
-        {% for category in prompts.categories %}
-        <div class="prompt-category">
-            <h3>{{ category.name }}</h3>
-
-            {% for prompt in category.prompts %}
-            <div class="prompt-card{% if category.id == 'website' and loop.first %} open{% endif %}">
-                <div class="prompt-card-header">
-                    <div>
-                        <h4>{{ prompt.title }}</h4>
-                        {% if prompt.cmsSection %}
-                        <span class="prompt-card-meta">CMS: {{ prompt.cmsSection }}</span>
-                        {% endif %}
-                    </div>
-                    <span class="chevron">&#9660;</span>
-                </div>
-                <div class="prompt-card-body">
-                    <div class="prompt-text"><button class="copy-btn">Copy</button><code>{{ prompt.prompt }}</code></div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% endfor %}
-    </div>
-</section>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="0; url=/rfy/prompts/">
+    <link rel="canonical" href="/rfy/prompts/">
+</head>
+<body>
+    <p>Redirecting to <a href="/rfy/prompts/">/rfy/prompts/</a>...</p>
+</body>
+</html>

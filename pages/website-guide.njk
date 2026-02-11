@@ -1,98 +1,14 @@
 ---
-layout: base.njk
-title: Website Update Guide
-description: How to update the RFY website using Claude and the CMS.
+layout: false
 permalink: /website-guide/
 ---
-
-<div class="page-header">
-    <div class="container">
-        <h1>{{ websiteGuide.title }}</h1>
-        <p>{{ websiteGuide.overview }}</p>
-    </div>
-</div>
-
-<section>
-    <div class="container">
-        <h2>Before You Start</h2>
-        <div class="steps">
-            {% for prereq in websiteGuide.prerequisites %}
-            <div class="step">
-                <div class="step-num">{{ loop.index }}</div>
-                <div class="step-content">
-                    <h4>{{ prereq.step }}</h4>
-                    <p>{{ prereq.detail }}{% if prereq.url %} <a href="{{ prereq.url }}">{{ prereq.url | replace("https://", "") }}</a>{% endif %}</p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<section class="section--alt">
-    <div class="container">
-        <h2>The Workflow</h2>
-        <div class="steps">
-            {% for step in websiteGuide.workflow %}
-            <div class="step">
-                <div class="step-num">{{ step.step }}</div>
-                <div class="step-content">
-                    <h4>{{ step.title }}</h4>
-                    <p>{{ step.description }}</p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <h2>CMS Sections</h2>
-        <p>Here's where to find each part of the website in the CMS.</p>
-        <table class="sections-table">
-            <thead>
-                <tr>
-                    <th>Section</th>
-                    <th>CMS Path</th>
-                    <th>What's There</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for section in websiteGuide.sections %}
-                <tr>
-                    <td><strong>{{ section.name }}</strong></td>
-                    <td>{{ section.path }}</td>
-                    <td>{{ section.description }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</section>
-
-<section class="section--alt">
-    <div class="container">
-        <h2>Quick Links</h2>
-        <div class="quick-links">
-            <a href="{{ websiteGuide.siteUrl }}" class="quick-link">RFY Website</a>
-            <a href="{{ websiteGuide.cmsUrl }}" class="quick-link">Open CMS</a>
-            <a href="/prompts/" class="quick-link">Starter Prompts</a>
-            <a href="https://claude.ai/download" class="quick-link">Claude Desktop</a>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <h2>Troubleshooting</h2>
-        <div class="troubleshooting">
-            {% for item in websiteGuide.troubleshooting %}
-            <div class="trouble-item">
-                <strong>{{ item.problem }}</strong>
-                <p>{{ item.solution }}</p>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="0; url=/rfy/website-guide/">
+    <link rel="canonical" href="/rfy/website-guide/">
+</head>
+<body>
+    <p>Redirecting to <a href="/rfy/website-guide/">/rfy/website-guide/</a>...</p>
+</body>
+</html>

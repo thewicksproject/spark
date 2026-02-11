@@ -1,5 +1,12 @@
 ---
+pagination:
+  data: orgs
+  size: 1
+  alias: org
 layout: base.njk
+eleventyComputed:
+  title: "{{ org.session.title }}"
+  permalink: "/{{ org.slug }}/"
 ---
 
 <div class="hero">
@@ -14,39 +21,45 @@ layout: base.njk
             <path d="M32 0C29.2 15.2 16 22.7 16 35.5 16 43.3 23.2 50 32 50s16-6.7 16-14.5C48 22.7 34.8 15.2 32 0z" fill="url(#flame-grad)" opacity="0.3"/>
             <path d="M32 16C30 25 20 30 20 38c0 5.6 5.4 10 12 10s12-4.4 12-10c0-8-10-13-12-22z" fill="url(#flame-grad)"/>
         </svg>
-        <h1>{{ site.title }}</h1>
-        <span class="hero-date">{{ site.tagline }}</span>
+        <h1>{{ org.session.title }}</h1>
+        <span class="hero-date">{% if org.session.date %}{{ org.session.date }} &middot; {% endif %}{{ org.session.duration }}</span>
     </div>
 </div>
 
 <section class="section--alt">
     <div class="container">
         <blockquote class="pull-quote">
-            <p>{{ site.motto }}</p>
+            <p>You all do incredibly hard work with limited resources. This tool isn't going to change what you do. But it might give you back time from the stuff that isn't your real work — so you can spend more on the stuff that is.</p>
         </blockquote>
     </div>
 </section>
 
-{% if orgs.length %}
 <section>
     <div class="container">
-        <div class="section-label">Training Sessions</div>
-        <h2>Organizations</h2>
-        <div class="quick-links">
-            {% for org in orgs %}
-            <a href="/{{ org.slug }}/" class="quick-link">{{ org.fullName }}</a>
+        <div class="section-label">Session Flow</div>
+        <h2>What We'll Cover</h2>
+        <div class="beats">
+            {% for beat in org.session.beats %}
+            <div class="beat">
+                <div class="beat-number">{{ beat.number }}</div>
+                <h3>{{ beat.title }}</h3>
+                <div class="duration">{{ beat.duration }}</div>
+                <p>{{ beat.description }}</p>
+            </div>
             {% endfor %}
         </div>
     </div>
 </section>
-{% endif %}
 
 <section class="section--alt">
     <div class="container">
         <h2>Quick Links</h2>
         <div class="quick-links">
-            {% for item in navigation %}
-            {% if item.url != "/" %}
+            {% for link in org.quickLinks %}
+            <a href="{{ link.url }}" class="quick-link">{{ link.label }}</a>
+            {% endfor %}
+            {% for item in org.navigation %}
+            {% if item.url != ("/"+org.slug+"/") %}
             <a href="{{ item.url }}" class="quick-link">{{ item.label }}</a>
             {% endif %}
             {% endfor %}

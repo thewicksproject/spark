@@ -1,0 +1,254 @@
+---
+pagination:
+  data: orgs
+  size: 1
+  alias: org
+layout: base.njk
+eleventyComputed:
+  title: "CMS Walkthrough"
+  permalink: "/{{ org.slug }}/walkthrough/"
+---
+
+<div class="page-header">
+    <div class="container">
+        <h1>CMS Walkthrough</h1>
+        <p>Step-by-step: draft content with Claude, publish through the CMS, see it live.</p>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <div class="walkthrough-intro">
+            <p>{{ org.walkthrough.intro }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="section--alt">
+    <div class="container">
+        <h2>Step 1: Draft with Claude</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h4>Open Claude Desktop</h4>
+                    <p>Launch the app on your computer. You'll see a chat window.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h4>Copy a prompt from the <a href="/{{ org.slug }}/prompts/">Prompts page</a></h4>
+                    <p>Pick the prompt that matches what you're updating. Each prompt tells you which CMS section to use.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h4>Paste, customize, and run</h4>
+                    <p>Replace the [brackets] with your real details. Press Enter. Review the output and iterate until you're happy.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="walkthrough-example">
+            <h4>Example: Adding a volunteer opportunity</h4>
+            <div class="prompt-text" style="margin-top: 0.75rem;">
+                <code>{{ org.walkthrough.examplePrompt }}</code>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Step 2: Open the CMS</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h4>Go to <a href="{{ org.cmsUrl }}" target="_blank">{{ org.cmsUrl | replace("https://", "") }}</a></h4>
+                    <p>This opens the content manager. If it's your first time, click "Login with GitHub" and authorize access.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h4>Find the sidebar</h4>
+                    <p>On the left you'll see <strong>Collections</strong> — a list of website sections. These match the CMS paths shown on each prompt.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">CMS Sidebar Sections</h3>
+        <p>Here's what you'll see in the sidebar and where each section maps:</p>
+
+        <div class="walkthrough-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sidebar Section</th>
+                        <th>What's Inside</th>
+                        <th>Website Page</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for section in org.walkthrough.cmsSections %}
+                    <tr>
+                        <td><strong>{{ section.name }}</strong></td>
+                        <td>{{ section.contents }}</td>
+                        <td>{{ section.page }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section--alt">
+    <div class="container">
+        <h2>Step 3: Navigate and Edit</h2>
+
+        <div class="walkthrough-demo">
+            <h3>Example: Volunteer Page &rarr; Volunteer Opportunities</h3>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Click "Volunteer Page" in the sidebar</h4>
+                        <p>You'll see one entry: <strong>Volunteer Opportunities</strong>. Click it.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>See the current entries</h4>
+                        <p>The form shows all existing volunteer roles as collapsible cards. A preview panel on the right shows how the data looks.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Click "Add opportunities +"</h4>
+                        <p>A new blank card appears at the bottom. Expand it by clicking the arrow.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h4>Paste Claude's output</h4>
+                        <p>Fill in the <strong>Title</strong> field (e.g., "Youth Workshop Facilitator"). Then add each detail bullet as a separate <strong>Detail</strong> entry using the "Add details +" button.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Step 4: Publish</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h4>Review your changes</h4>
+                    <p>Check the preview panel on the right side. Make sure everything looks right.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h4>Click the green "Publish" button</h4>
+                    <p>It's at the top of the page. A dropdown appears — click <strong>"Publish now"</strong>. You'll see "CHANGES SAVED" confirm the publish.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section--alt">
+    <div class="container">
+        <h2>Step 5: See It Live</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h4>Wait 30-60 seconds</h4>
+                    <p>The website rebuilds automatically after you publish.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h4>Open <a href="{{ org.siteUrl }}" target="_blank">{{ org.siteUrl | replace("https://", "") }}</a></h4>
+                    <p>Navigate to the page you updated. Do a hard refresh (<strong>Cmd+Shift+R</strong> on Mac, <strong>Ctrl+Shift+R</strong> on Windows) to see the latest version.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h4>Verify your changes</h4>
+                    <p>Your new content should appear on the live site. If it doesn't show up after 60 seconds, try hard-refreshing again.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Troubleshooting</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-badge" style="background: #FFEBEE; color: #C62828;">!</div>
+                <h4>CMS won't load</h4>
+                <p>Try Chrome (works best). Clear cache and try again. Try incognito mode.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-badge" style="background: #FFEBEE; color: #C62828;">!</div>
+                <h4>GitHub login fails</h4>
+                <p>Make sure you accepted the collaborator invitation email. Check spam folder.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-badge" style="background: #FFEBEE; color: #C62828;">!</div>
+                <h4>Changes not showing</h4>
+                <p>Wait 60 seconds. Hard refresh (Cmd+Shift+R). If still nothing, ask Victor.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-badge" style="background: #FFEBEE; color: #C62828;">!</div>
+                <h4>Published wrong content</h4>
+                <p>Don't worry — Victor can revert any change. Just let him know.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if org.walkthrough.verificationChecks %}
+<section class="section--alt">
+    <div class="container">
+        <h2>Verification Log</h2>
+        <p style="color: var(--steel-blue); margin-bottom: 1rem;">Pre-training verification completed {{ org.walkthrough.verificationDate }}.</p>
+
+        <div class="walkthrough-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Check</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in org.walkthrough.verificationChecks %}
+                    <tr>
+                        <td>{{ item.check }}</td>
+                        <td>{{ item.result }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endif %}
