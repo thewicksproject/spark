@@ -1,0 +1,111 @@
+{
+  "title": "Starter Prompts",
+  "subtitle": "Copy these into Claude to get started. Customize the details in [brackets].",
+  "categories": [
+    {
+      "id": "website",
+      "name": "Website Updates",
+      "icon": "globe",
+      "prompts": [
+        {
+          "title": "Write a Testimonial",
+          "task": "Testimonials section",
+          "cmsSection": "Stories > Testimonials",
+          "prompt": "I'm updating the Reach for Youth website. I need to write a new testimonial for the testimonials section. Here's the format:\n- A quote (1-3 sentences, first person, from a parent/family)\n- A name (first name only or \"Parent of Teen Court participant\")\n- A role description\n\nThe testimonial should feel genuine and specific — not generic. It should reflect the real impact of RFY's youth mental health programs.\n\nHere's an example of an existing testimonial for tone reference:\n\"This program changed my life.\" — Parent, Teen Court participant's mother\n\nPlease draft 2-3 options for me to choose from."
+        },
+        {
+          "title": "Update a Program Description",
+          "task": "Program description",
+          "cmsSection": "Services > Mental Health or Restorative",
+          "prompt": "I'm updating the Reach for Youth website. I need to rewrite the description for our [Mental Health / Restorative Justice] program.\n\nHere's what the program does:\n- [Describe the program in your own words]\n- [Who it serves]\n- [What makes it unique]\n\nThe audience is parents and families visiting our website. Tone should be warm, professional, and hopeful — not clinical. Keep it under 150 words.\n\nPlease draft 2 versions for me to compare."
+        },
+        {
+          "title": "Update Impact Statistics",
+          "task": "Homepage statistics",
+          "cmsSection": "Statistics",
+          "prompt": "I'm updating the Reach for Youth website statistics. I need to update the following numbers on the homepage:\n\n- Youth Served Annually: [new number]\n- Programs Offered: [new number]\n- Years of Service: [new number]\n- Volunteers: [new number]\n\nPlease format each as a short, impactful stat with a label. For example:\n\"950+ Youth Served Annually\"\n\nKeep the labels concise and consistent in style."
+        },
+        {
+          "title": "Write a Staff Bio",
+          "task": "Staff profile",
+          "cmsSection": "People > Staff",
+          "prompt": "I'm adding a new staff member to the Reach for Youth website. Please write a professional bio based on this information:\n\n- Name: [Full name]\n- Title: [Job title]\n- Department: [Department]\n- Background: [Brief background — education, experience, what they're passionate about]\n\nKeep it to 2-3 sentences. Tone should be warm and professional — like introducing a colleague you respect. Write in third person."
+        },
+        {
+          "title": "Add a Timeline Entry",
+          "task": "Organization history",
+          "cmsSection": "About > Timeline",
+          "prompt": "I'm adding a new milestone to the Reach for Youth website timeline. Here's the event:\n\n- Year: [Year]\n- What happened: [Describe the milestone]\n- Why it matters: [Why this was significant for RFY]\n\nPlease write a 1-2 sentence description that captures both what happened and why it mattered. Match the tone of a nonprofit celebrating its growth — proud but humble."
+        }
+      ]
+    },
+    {
+      "id": "meetings",
+      "name": "Meeting Notes",
+      "icon": "clipboard",
+      "prompts": [
+        {
+          "title": "Summarize Meeting Notes",
+          "task": "Post-meeting summary",
+          "prompt": "Summarize these meeting notes. Pull out:\n- Key decisions made\n- Action items with owners and deadlines\n- Open questions that still need answers\n- Any topics that were tabled for later\n\nFormat it so I can paste it into an email to the team.\n\n[Paste your meeting notes here]"
+        },
+        {
+          "title": "Prepare Meeting Agenda",
+          "task": "Pre-meeting prep",
+          "prompt": "Help me create an agenda for a [type of meeting] with [who's attending].\n\nTopics to cover:\n- [Topic 1]\n- [Topic 2]\n- [Topic 3]\n\nThe meeting is [duration] long. Include time estimates for each item and leave 5 minutes at the end for action items. Put the most important topic first."
+        }
+      ]
+    },
+    {
+      "id": "email",
+      "name": "Email Drafting",
+      "icon": "envelope",
+      "prompts": [
+        {
+          "title": "Internal Update Email",
+          "task": "Staff communication",
+          "prompt": "Draft an internal email to department leads about [topic].\nTone: professional but warm, like how our COO writes.\nKeep it under 200 words. Include a clear ask at the end.\n\nKey points to cover:\n- [Point 1]\n- [Point 2]\n- [Point 3]"
+        },
+        {
+          "title": "Follow-Up Email",
+          "task": "Post-meeting follow-up",
+          "prompt": "Draft a follow-up email after today's meeting about [topic].\n\nInclude:\n- Brief thank-you for attending\n- Summary of what we decided (2-3 bullet points)\n- Next steps with who's responsible\n- Deadline or next meeting date\n\nKeep it concise — people skim emails. Tone should be [friendly/formal/direct]."
+        }
+      ]
+    },
+    {
+      "id": "grants",
+      "name": "Grant Writing",
+      "icon": "pencil",
+      "prompts": [
+        {
+          "title": "Program Description for Grant",
+          "task": "Grant application section",
+          "prompt": "Help me write a program description for a grant application.\n\nProgram name: [Name]\nWhat it does: [Description]\nWho it serves: [Population]\nKey outcomes: [What results has it produced?]\n\nThe funder cares about: [what the funder values — equity, outcomes, innovation, etc.]\n\nWrite 250-300 words. Use data where I've provided it. Tone should be confident and evidence-based, not salesy."
+        },
+        {
+          "title": "Multi-Audience Rewrite",
+          "task": "Adapt content for different readers",
+          "prompt": "Here's our [program name] program description. Rewrite it three ways:\n1. For our website (parents are the audience)\n2. For a grant application (funders are the audience)\n3. For a staff recruitment posting (potential employees are the audience)\n\n[Paste description]\n\nKeep each version under 200 words. Adjust tone and emphasis for each audience."
+        }
+      ]
+    },
+    {
+      "id": "reports",
+      "name": "Reports & Documents",
+      "icon": "document",
+      "prompts": [
+        {
+          "title": "Format a Report",
+          "task": "Report cleanup",
+          "prompt": "Help me clean up and format this report. I need:\n- A clear executive summary (3-4 sentences)\n- Consistent heading structure\n- Bullet points instead of long paragraphs where appropriate\n- Any data presented in a table format\n\nKeep my content — just make it more readable.\n\n[Paste your draft report]"
+        },
+        {
+          "title": "Create a One-Pager",
+          "task": "Program summary",
+          "prompt": "Create a one-page summary of our [program/initiative]. Include:\n- What it is (2-3 sentences)\n- Who it serves\n- Key outcomes/impact (use numbers if available)\n- How to get involved or learn more\n\nThis will be shared with [audience]. Make it scannable — use headers and bullet points. Keep it to one page when printed.\n\nHere's the information to work from:\n[Paste your content]"
+        }
+      ]
+    }
+  ]
+}

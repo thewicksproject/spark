@@ -1,0 +1,131 @@
+---
+layout: base.njk
+title: Boundaries
+description: AI use boundaries — what's safe, what needs review, what's off-limits.
+permalink: /boundaries/
+---
+
+<div class="page-header">
+    <div class="container">
+        <h1>{{ boundaries.title }}</h1>
+        <p>{{ boundaries.subtitle }}</p>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <h2>Decision Tree</h2>
+        <div class="decision-tree">
+            <div class="decision-step">
+                <span class="decision-q">{{ boundaries.decisionTree.question1 }}</span>
+            </div>
+            <div class="decision-step">
+                <span class="decision-arrow">&rarr; YES &rarr;</span>
+                <span style="color: var(--red); font-weight: 600;">{{ boundaries.decisionTree.answer1yes }}</span>
+            </div>
+            <div class="decision-step">
+                <span class="decision-arrow">&rarr; NO &darr;</span>
+            </div>
+            <div class="decision-step">
+                <span class="decision-q">{{ boundaries.decisionTree.question2 }}</span>
+            </div>
+            <div class="decision-step">
+                <span class="decision-arrow">&rarr; YES &rarr;</span>
+                <span style="color: var(--yellow); font-weight: 600;">{{ boundaries.decisionTree.answer2yes }}</span>
+            </div>
+            <div class="decision-step">
+                <span class="decision-arrow">&rarr; NO &darr;</span>
+            </div>
+            <div class="decision-step">
+                <span class="decision-q">{{ boundaries.decisionTree.question3 }}</span>
+            </div>
+            <div class="decision-step">
+                <span class="decision-arrow">&rarr; YES &rarr;</span>
+                <span style="color: var(--green); font-weight: 600;">{{ boundaries.decisionTree.answer3yes }}</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Traffic Light Card</h2>
+        <p>Print this out and keep it at your desk. <button onclick="window.print()" class="copy-btn no-print" style="position:static; display:inline-block;">Print this page</button></p>
+
+        <div class="traffic-light">
+            <div class="tl-card tl-green">
+                <h3><span class="tl-dot"></span> {{ boundaries.green.label }}</h3>
+                <p>{{ boundaries.green.description }}</p>
+                <ul>
+                    {% for item in boundaries.green.items %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="tl-card tl-yellow">
+                <h3><span class="tl-dot"></span> {{ boundaries.yellow.label }}</h3>
+                <p>{{ boundaries.yellow.description }}</p>
+                <ul>
+                    {% for item in boundaries.yellow.items %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <div style="margin-top: var(--space-xs);">
+                    <strong style="font-size: 0.9rem;">Yellow Zone Process:</strong>
+                    <ol style="padding-left: 1.25rem; margin-top: 0.25rem; font-size: 0.9rem;">
+                        {% for step in boundaries.yellow.process %}
+                        <li>{{ step }}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+
+            <div class="tl-card tl-red">
+                <h3><span class="tl-dot"></span> {{ boundaries.red.label }}</h3>
+                <p>{{ boundaries.red.description }}</p>
+                <ul>
+                    {% for item in boundaries.red.items %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="pii-warning">
+            <h3>{{ boundaries.pii.title }}</h3>
+            <p>Never enter any of these into AI tools:</p>
+            <ul style="list-style: none; padding: 0;">
+                {% for item in boundaries.pii.neverEnter %}
+                <li style="padding: 0.2rem 0; padding-left: 1.25rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--red);">&times;</span>
+                    {{ item }}
+                </li>
+                {% endfor %}
+            </ul>
+
+            <div class="pii-example">
+                <div class="bad">&#10007; {{ boundaries.pii.safeAlternative.bad }}</div>
+                <div class="good">&#10003; {{ boundaries.pii.safeAlternative.good }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="incident-box">
+            <h3>{{ boundaries.incident.title }}</h3>
+            <ol>
+                {% for step in boundaries.incident.steps %}
+                <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+            <p class="incident-note">{{ boundaries.incident.note }}</p>
+        </div>
+    </div>
+</section>

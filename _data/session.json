@@ -1,0 +1,32 @@
+{
+  "title": "AI for Your Real Work",
+  "date": "February 11, 2025",
+  "duration": "90 minutes",
+  "audience": "RFY Department Heads",
+  "beats": [
+    {
+      "number": 1,
+      "title": "Boundaries",
+      "duration": "8 min",
+      "description": "The traffic light card — what's safe, what needs review, what's off-limits."
+    },
+    {
+      "number": 2,
+      "title": "Watch This",
+      "duration": "10 min",
+      "description": "Live demo: updating the RFY website with Claude in real time."
+    },
+    {
+      "number": 3,
+      "title": "Your Turn",
+      "duration": "35 min",
+      "description": "Everyone updates the RFY website — draft with Claude, publish through the CMS."
+    },
+    {
+      "number": 4,
+      "title": "Your Own Work",
+      "duration": "35 min",
+      "description": "Apply what you've learned to your own projects, then share what you built."
+    }
+  ]
+}

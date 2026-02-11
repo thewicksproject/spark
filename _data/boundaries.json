@@ -1,0 +1,87 @@
+{
+  "title": "AI Use Boundaries",
+  "subtitle": "Know instantly whether an AI use case is appropriate.",
+  "decisionTree": {
+    "question1": "Does this involve client data or PII?",
+    "answer1yes": "RED — Do not use AI.",
+    "question2": "Will this go outside the organization?",
+    "answer2yes": "YELLOW — Get a second pair of eyes before sending.",
+    "question3": "Is this internal admin work?",
+    "answer3yes": "GREEN — Go ahead."
+  },
+  "green": {
+    "label": "GREEN — Go Ahead",
+    "description": "Administrative tasks. No additional approval needed.",
+    "items": [
+      "Meeting notes and summaries",
+      "Email drafts (internal)",
+      "Report formatting and organization",
+      "Data entry assistance",
+      "Calendar scheduling help",
+      "Research summaries (public sources)",
+      "Training material organization",
+      "Grant writing assistance",
+      "Website content updates"
+    ]
+  },
+  "yellow": {
+    "label": "YELLOW — Second Pair of Eyes",
+    "description": "Requires review before use. Get supervisor sign-off.",
+    "items": [
+      "External communications (review before send)",
+      "Resource recommendations for clients",
+      "Program descriptions for public use",
+      "Aggregate data analysis",
+      "Template creation for client-facing use"
+    ],
+    "process": [
+      "Use AI to create a draft",
+      "Mark clearly as \"AI-assisted draft\"",
+      "Submit to appropriate supervisor",
+      "Do not use until approved"
+    ]
+  },
+  "red": {
+    "label": "RED — Do Not Use AI",
+    "description": "These tasks are off-limits for AI. No exceptions.",
+    "items": [
+      "Client names, case notes, or any PII",
+      "Direct client communication",
+      "Crisis assessment or risk evaluation",
+      "Clinical decision-making",
+      "Diagnosis or treatment planning",
+      "Suicide/self-harm risk evaluation",
+      "Confidential case discussions"
+    ]
+  },
+  "pii": {
+    "title": "What counts as PII?",
+    "neverEnter": [
+      "Client names (first, last, or both)",
+      "Dates of birth",
+      "Addresses or phone numbers",
+      "Email addresses of clients",
+      "Social security numbers",
+      "Case numbers or client IDs",
+      "Photos or images of clients",
+      "Session notes or case notes",
+      "Medical or mental health information",
+      "Any combination that could identify someone"
+    ],
+    "safeAlternative": {
+      "bad": "Summarize case notes for John Smith, DOB 3/15/1995",
+      "good": "Summarize this progress note: [paste text with all identifying info removed]"
+    }
+  },
+  "incident": {
+    "title": "If You Accidentally Enter Client PII",
+    "steps": [
+      "Stop immediately — don't continue the conversation",
+      "Document what was entered (screenshot if possible)",
+      "Tell your supervisor within 24 hours",
+      "Report to Victor",
+      "Follow your organization's incident protocol"
+    ],
+    "note": "No punishment for honest reporting. We want to learn from incidents, not hide them."
+  }
+}

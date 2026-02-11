@@ -1,0 +1,66 @@
+---
+layout: base.njk
+---
+
+<div class="hero">
+    <div class="container">
+        <h1>{{ session.title }}</h1>
+        <p>{{ session.date }} &middot; {{ session.duration }}</p>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <p style="font-size: 1.1rem; max-width: 60ch; margin: 0 auto; text-align: center; color: var(--slate);">
+            You all do incredibly hard work with limited resources. This tool isn't going to change what you do. But it might give you back time from the stuff that isn't your real work — so you can spend more on the stuff that is.
+        </p>
+    </div>
+</section>
+
+<section style="padding-top: 0;">
+    <div class="container">
+        <h2>What We'll Cover</h2>
+        <div class="beats">
+            {% for beat in session.beats %}
+            <div class="beat">
+                <div class="beat-number">{{ beat.number }}</div>
+                <h3>{{ beat.title }}</h3>
+                <div class="duration">{{ beat.duration }}</div>
+                <p>{{ beat.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Quick Links</h2>
+        <div class="quick-links">
+            {% for link in resources.quickLinks %}
+            <a href="{{ link.url }}" class="quick-link">{{ link.label }}</a>
+            {% endfor %}
+            {% for item in navigation %}
+            {% if item.url != "/" %}
+            <a href="{{ item.url }}" class="quick-link">{{ item.label }}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>The 4D Framework</h2>
+        <p>A mental model for working with AI effectively.</p>
+        <div class="framework-grid">
+            {% for d in resources.framework.dimensions %}
+            <div class="framework-item">
+                <h4>{{ d.name }}</h4>
+                <div class="question">{{ d.question }}</div>
+                <p>{{ d.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

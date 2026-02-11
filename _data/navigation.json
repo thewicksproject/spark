@@ -1,0 +1,8 @@
+[
+  { "label": "Home", "url": "/" },
+  { "label": "Boundaries", "url": "/boundaries/" },
+  { "label": "Getting Started", "url": "/getting-started/" },
+  { "label": "Prompts", "url": "/prompts/" },
+  { "label": "Website Guide", "url": "/website-guide/" },
+  { "label": "Resources", "url": "/resources/" }
+]

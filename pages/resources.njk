@@ -1,0 +1,73 @@
+---
+layout: base.njk
+title: Resources
+description: Free courses, tools, and reference materials for continuing your AI learning.
+permalink: /resources/
+---
+
+<div class="page-header">
+    <div class="container">
+        <h1>{{ resources.title }}</h1>
+        <p>{{ resources.subtitle }}</p>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <h2>Free Courses</h2>
+        <div class="resource-grid">
+            {% for course in resources.courses %}
+            <a href="{{ course.url }}" class="resource-card">
+                <h4>{{ course.title }}</h4>
+                <div class="provider">{{ course.provider }} &middot; {{ course.duration }}</div>
+                <p>{{ course.description }}</p>
+                {% if course.recommended %}
+                <span class="badge badge--recommended">Recommended</span>
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Tools</h2>
+        <div class="resource-grid">
+            {% for tool in resources.tools %}
+            <a href="{{ tool.url }}" class="resource-card">
+                <h4>{{ tool.name }}</h4>
+                <span class="badge badge--level">{{ tool.level }}</span>
+                <p>{{ tool.description }}</p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>The 4D Framework</h2>
+        <p>{{ resources.framework.description }}</p>
+        <div class="framework-grid">
+            {% for d in resources.framework.dimensions %}
+            <div class="framework-item">
+                <h4>{{ d.name }}</h4>
+                <div class="question">{{ d.question }}</div>
+                <p>{{ d.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Quick Links</h2>
+        <div class="quick-links">
+            {% for link in resources.quickLinks %}
+            <a href="{{ link.url }}" class="quick-link">{{ link.label }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

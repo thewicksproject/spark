@@ -1,0 +1,13 @@
+{
+  "name": "spark-training-site",
+  "version": "1.0.0",
+  "description": "Spark — AI training resources by The Wicks Project",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "title": "Resources",
+  "subtitle": "Keep learning after the session. All free, all self-paced.",
+  "courses": [
+    {
+      "title": "AI Fluency for Nonprofits",
+      "provider": "Anthropic",
+      "url": "https://anthropic.skilljar.com/ai-fluency-for-nonprofits",
+      "description": "Built specifically for nonprofit professionals. Covers responsible AI use, practical applications, and organizational readiness.",
+      "duration": "Self-paced",
+      "recommended": true
+    },
+    {
+      "title": "AI Fluency: Framework & Foundations",
+      "provider": "Anthropic",
+      "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
+      "description": "The foundational course on working with AI. Covers the 4D Framework: Delegation, Description, Discernment, and Diligence.",
+      "duration": "Self-paced",
+      "recommended": false
+    },
+    {
+      "title": "Claude 101",
+      "provider": "Anthropic",
+      "url": "https://anthropic.skilljar.com/claude-101",
+      "description": "Getting started with Claude specifically. Interface walkthrough, best practices, and prompt techniques.",
+      "duration": "Self-paced",
+      "recommended": false
+    }
+  ],
+  "framework": {
+    "title": "The 4D Framework",
+    "description": "A mental model for working with AI effectively.",
+    "dimensions": [
+      {
+        "name": "Delegation",
+        "question": "What should AI handle?",
+        "description": "Identify tasks where AI adds value — repetitive admin work, drafting, formatting, research. Keep human judgment for decisions that matter."
+      },
+      {
+        "name": "Description",
+        "question": "How do I tell it what I need?",
+        "description": "Good prompts have context, specifics, and format. Think of it as briefing a smart colleague — the more context you give, the better the output."
+      },
+      {
+        "name": "Discernment",
+        "question": "Is the output good enough?",
+        "description": "AI output is a first draft, not a final product. Read it critically. Check facts. Adjust tone. You're the editor, not the audience."
+      },
+      {
+        "name": "Diligence",
+        "question": "Am I using this responsibly?",
+        "description": "Know the boundaries. Protect client data. Review before sharing externally. When in doubt, check the traffic light card."
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Claude Desktop",
+      "description": "The chat interface — where you'll start. Great for drafting, brainstorming, and iterating.",
+      "url": "https://claude.ai/download",
+      "level": "Start here"
+    },
+    {
+      "name": "Claude Cowork",
+      "description": "Claude working directly with your documents. Like having an assistant who can read and edit your files.",
+      "url": "https://claude.ai",
+      "level": "Next step"
+    },
+    {
+      "name": "Claude Code",
+      "description": "The power tool. Manages code, websites, and complex workflows from the terminal.",
+      "url": "https://docs.anthropic.com/en/docs/claude-code",
+      "level": "Power users"
+    }
+  ],
+  "quickLinks": [
+    {
+      "label": "RFY Website",
+      "url": "https://rfy.thewicksproject.org"
+    },
+    {
+      "label": "RFY Website CMS",
+      "url": "https://rfy.thewicksproject.org/admin/"
+    },
+    {
+      "label": "Claude Desktop Download",
+      "url": "https://claude.ai/download"
+    },
+    {
+      "label": "GitHub Sign Up",
+      "url": "https://github.com/signup"
+    }
+  ]
+}

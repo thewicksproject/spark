@@ -1,0 +1,84 @@
+{
+  "title": "Website Update Guide",
+  "subtitle": "How to update the RFY website using Claude and the CMS.",
+  "overview": "The workflow has two parts: draft content with Claude, then publish it through the CMS. No coding, no terminal, no technical skills required.",
+  "cmsUrl": "https://rfy.thewicksproject.org/admin/",
+  "siteUrl": "https://rfy.thewicksproject.org",
+  "prerequisites": [
+    {
+      "step": "GitHub account",
+      "detail": "Sign up free at github.com/signup. This is your login for the CMS.",
+      "url": "https://github.com/signup"
+    },
+    {
+      "step": "Collaborator access",
+      "detail": "Victor adds you to the website repository. You'll get an email invitation — accept it.",
+      "url": null
+    },
+    {
+      "step": "Claude Desktop",
+      "detail": "Download at claude.ai/download. This is where you draft content.",
+      "url": "https://claude.ai/download"
+    }
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "title": "Draft with Claude",
+      "description": "Open Claude Desktop. Copy a starter prompt from the Prompts page. Paste it in, customize the details, and iterate until you're happy with the output."
+    },
+    {
+      "step": 2,
+      "title": "Open the CMS",
+      "description": "Go to rfy.thewicksproject.org/admin/ in your browser. Click \"Login with GitHub\" and authorize access."
+    },
+    {
+      "step": 3,
+      "title": "Find your section",
+      "description": "The CMS has labeled sections matching the website. Navigate to the section you're updating (e.g., Stories > Testimonials, Services > Mental Health)."
+    },
+    {
+      "step": 4,
+      "title": "Paste and publish",
+      "description": "Paste Claude's output into the form fields. Review it one more time. Click Publish."
+    },
+    {
+      "step": 5,
+      "title": "See it live",
+      "description": "Refresh rfy.thewicksproject.org. Your changes should appear within 30-60 seconds."
+    }
+  ],
+  "sections": [
+    { "name": "Statistics", "path": "Statistics", "description": "Homepage numbers — youth served, programs, volunteers" },
+    { "name": "Services", "path": "Services > Mental Health or Restorative", "description": "Program descriptions and details" },
+    { "name": "Staff", "path": "People > Staff", "description": "Staff bios and photos" },
+    { "name": "Board", "path": "People > Board", "description": "Board member profiles" },
+    { "name": "Testimonials", "path": "Stories > Testimonials", "description": "Parent and family testimonials" },
+    { "name": "Timeline", "path": "About > Timeline", "description": "Organization history milestones" },
+    { "name": "Partners", "path": "About > Partners", "description": "Community partner organizations" },
+    { "name": "Volunteers", "path": "Volunteer > Opportunities", "description": "Volunteer position descriptions" },
+    { "name": "Donation Levels", "path": "Donate > Impact", "description": "Giving levels and their impact" }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "CMS won't load or shows a blank page",
+      "solution": "Try a different browser (Chrome works best). Clear cache and try again."
+    },
+    {
+      "problem": "GitHub login fails",
+      "solution": "Make sure you accepted the collaborator invitation email. Check spam. Try incognito mode."
+    },
+    {
+      "problem": "Changes aren't showing on the website",
+      "solution": "Wait 30-60 seconds, then hard refresh (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows)."
+    },
+    {
+      "problem": "Got an error when publishing",
+      "solution": "If someone else published at the same time, wait 30 seconds and try again."
+    },
+    {
+      "problem": "Published the wrong content",
+      "solution": "Don't worry — Victor can revert any change. Just let him know."
+    }
+  ]
+}

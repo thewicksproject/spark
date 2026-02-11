@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }} — {{ site.tagline }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="theme-color" content="{{ site.themeColor }}">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   style-src 'self' 'unsafe-inline';
+                   img-src 'self' data:;
+                   font-src 'self';
+                   script-src 'self' 'unsafe-inline';
+                   frame-ancestors 'none';
+                   base-uri 'self';">
+
+    <meta property="og:title" content="{{ title or site.title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {% include "header.njk" %}
+
+    <main id="main-content">
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+
+    <script>
+        // Prompt card toggle
+        document.querySelectorAll('.prompt-card-header').forEach(function(header) {
+            header.addEventListener('click', function() {
+                this.closest('.prompt-card').classList.toggle('open');
+            });
+        });
+
+        // Copy to clipboard
+        document.querySelectorAll('.copy-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var text = this.closest('.prompt-text').querySelector('code').textContent;
+                navigator.clipboard.writeText(text).then(function() {
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(function() {
+                        btn.textContent = 'Copy';
+                        btn.classList.remove('copied');
+                    }, 2000);
+                });
+            });
+        });
+
+        // Mobile nav toggle
+        var toggle = document.querySelector('.nav-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function() {
+                document.querySelector('nav').classList.toggle('open');
+            });
+        }
+    </script>
+</body>
+</html>
