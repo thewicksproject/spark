@@ -1199,3 +1199,66 @@ footer a {
 .skip-link:focus {
     left: 0;
 }
+
+/* Walkthrough page */
+.walkthrough-intro {
+    font-size: 1.1rem;
+    color: var(--slate);
+    max-width: 700px;
+}
+
+.walkthrough-example {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.walkthrough-example h4 {
+    font-family: Charter, Cambria, Georgia, serif;
+    margin-bottom: 0.5rem;
+}
+
+.walkthrough-demo {
+    margin-top: 1rem;
+}
+
+.walkthrough-demo h3 {
+    font-family: Charter, Cambria, Georgia, serif;
+    margin-bottom: 1rem;
+}
+
+.walkthrough-table {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.walkthrough-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.walkthrough-table th {
+    background: var(--cream);
+    font-weight: 700;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--slate);
+}
+
+.walkthrough-table td {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--mist);
+    font-size: 0.95rem;
+}
+
+.walkthrough-table tr:hover td {
+    background: var(--warm-white);
+}
