@@ -48,6 +48,11 @@
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 var text = this.closest('.prompt-text').querySelector('code').textContent;
+                if (!navigator.clipboard) {
+                    btn.textContent = 'Use Ctrl+C';
+                    setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+                    return;
+                }
                 navigator.clipboard.writeText(text).then(function() {
                     btn.textContent = 'Copied!';
                     btn.classList.add('copied');
@@ -55,6 +60,9 @@
                         btn.textContent = 'Copy';
                         btn.classList.remove('copied');
                     }, 2000);
+                }).catch(function() {
+                    btn.textContent = 'Failed';
+                    setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
                 });
             });
         });
