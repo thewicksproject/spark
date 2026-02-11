@@ -30,7 +30,7 @@ permalink: /resources/
     </div>
 </section>
 
-<section>
+<section class="section--alt">
     <div class="container">
         <h2>Tools</h2>
         <div class="resource-grid">
@@ -49,19 +49,11 @@ permalink: /resources/
     <div class="container">
         <h2>The 4D Framework</h2>
         <p>{{ resources.framework.description }}</p>
-        <div class="framework-grid">
-            {% for d in resources.framework.dimensions %}
-            <div class="framework-item">
-                <h4>{{ d.name }}</h4>
-                <div class="question">{{ d.question }}</div>
-                <p>{{ d.description }}</p>
-            </div>
-            {% endfor %}
-        </div>
+        {% include "framework.njk" %}
     </div>
 </section>
 
-<section>
+<section class="section--alt">
     <div class="container">
         <h2>Quick Links</h2>
         <div class="quick-links">

@@ -4,21 +4,32 @@ layout: base.njk
 
 <div class="hero">
     <div class="container">
+        <svg class="hero-flame" viewBox="0 0 64 80" aria-hidden="true">
+            <defs>
+                <linearGradient id="flame-grad" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stop-color="#C9A66E"/>
+                    <stop offset="100%" stop-color="#DEBA85"/>
+                </linearGradient>
+            </defs>
+            <path d="M32 0C29.2 15.2 16 22.7 16 35.5 16 43.3 23.2 50 32 50s16-6.7 16-14.5C48 22.7 34.8 15.2 32 0z" fill="url(#flame-grad)" opacity="0.3"/>
+            <path d="M32 16C30 25 20 30 20 38c0 5.6 5.4 10 12 10s12-4.4 12-10c0-8-10-13-12-22z" fill="url(#flame-grad)"/>
+        </svg>
         <h1>{{ session.title }}</h1>
-        <p>{{ session.date }} &middot; {{ session.duration }}</p>
+        <span class="hero-date">{{ session.date }} &middot; {{ session.duration }}</span>
     </div>
 </div>
 
-<section>
+<section class="section--alt">
     <div class="container">
-        <p style="font-size: 1.1rem; max-width: 60ch; margin: 0 auto; text-align: center; color: var(--slate);">
-            You all do incredibly hard work with limited resources. This tool isn't going to change what you do. But it might give you back time from the stuff that isn't your real work — so you can spend more on the stuff that is.
-        </p>
+        <blockquote class="pull-quote">
+            <p>You all do incredibly hard work with limited resources. This tool isn't going to change what you do. But it might give you back time from the stuff that isn't your real work — so you can spend more on the stuff that is.</p>
+        </blockquote>
     </div>
 </section>
 
-<section style="padding-top: 0;">
+<section>
     <div class="container">
+        <div class="section-label">Session Flow</div>
         <h2>What We'll Cover</h2>
         <div class="beats">
             {% for beat in session.beats %}
@@ -33,7 +44,7 @@ layout: base.njk
     </div>
 </section>
 
-<section>
+<section class="section--alt">
     <div class="container">
         <h2>Quick Links</h2>
         <div class="quick-links">
@@ -51,16 +62,9 @@ layout: base.njk
 
 <section>
     <div class="container">
+        <div class="section-label">Mental Model</div>
         <h2>The 4D Framework</h2>
         <p>A mental model for working with AI effectively.</p>
-        <div class="framework-grid">
-            {% for d in resources.framework.dimensions %}
-            <div class="framework-item">
-                <h4>{{ d.name }}</h4>
-                <div class="question">{{ d.question }}</div>
-                <p>{{ d.description }}</p>
-            </div>
-            {% endfor %}
-        </div>
+        {% include "framework.njk" %}
     </div>
 </section>

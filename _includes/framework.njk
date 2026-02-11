@@ -1,0 +1,9 @@
+<div class="framework-grid">
+    {% for d in resources.framework.dimensions %}
+    <div class="framework-item">
+        <h4>{{ d.name }}</h4>
+        <div class="question">{{ d.question }}</div>
+        <p>{{ d.description }}</p>
+    </div>
+    {% endfor %}
+</div>

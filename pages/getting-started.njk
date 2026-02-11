@@ -41,7 +41,7 @@ permalink: /getting-started/
     </div>
 </section>
 
-<section>
+<section class="section--alt">
     <div class="container">
         <h2>First Prompts to Try</h2>
         <p>Start with these. No setup needed — just paste into Claude and see what happens.</p>
@@ -95,20 +95,24 @@ permalink: /getting-started/
     <div class="container">
         <h2>Tips for Better Prompts</h2>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-sm);">
-            <div class="framework-item">
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-badge">1</div>
                 <h4>Give context</h4>
                 <p>"I'm a program director at a youth nonprofit" tells Claude how to frame its response.</p>
             </div>
-            <div class="framework-item">
+            <div class="tip-card">
+                <div class="tip-badge">2</div>
                 <h4>Be specific</h4>
                 <p>"Under 200 words, in bullet points, for a grant funder" is better than "make this better."</p>
             </div>
-            <div class="framework-item">
+            <div class="tip-card">
+                <div class="tip-badge">3</div>
                 <h4>Iterate</h4>
                 <p>Don't accept the first output. Say "make it shorter" or "use a warmer tone" or "add more data."</p>
             </div>
-            <div class="framework-item">
+            <div class="tip-card">
+                <div class="tip-badge">4</div>
                 <h4>Give examples</h4>
                 <p>"Here's a testimonial we like: [example]. Write something similar" gives Claude a model to follow.</p>
             </div>
@@ -116,38 +120,30 @@ permalink: /getting-started/
     </div>
 </section>
 
-<section>
+<section class="section--alt">
     <div class="container">
         <h2>The 4D Framework</h2>
         <p>{{ resources.framework.description }}</p>
-        <div class="framework-grid">
-            {% for d in resources.framework.dimensions %}
-            <div class="framework-item">
-                <h4>{{ d.name }}</h4>
-                <div class="question">{{ d.question }}</div>
-                <p>{{ d.description }}</p>
-            </div>
-            {% endfor %}
-        </div>
+        {% include "framework.njk" %}
     </div>
 </section>
 
 <section>
     <div class="container">
         <h2>What Claude Is (and Isn't)</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
-            <div>
+        <div class="is-isnt-grid">
+            <div class="is-isnt-card is-isnt-card--is">
                 <h3 style="color: #2E7D32;">Think of Claude as...</h3>
-                <ul style="padding-left: 1.25rem;">
+                <ul>
                     <li>A smart intern who reads fast but has no judgment</li>
                     <li>A first-draft machine you always edit</li>
                     <li>A brainstorming partner who never gets tired</li>
                     <li>A formatting tool that understands context</li>
                 </ul>
             </div>
-            <div>
-                <h3 style="color: var(--red);">Claude is NOT...</h3>
-                <ul style="padding-left: 1.25rem;">
+            <div class="is-isnt-card is-isnt-card--isnt">
+                <h3 style="color: var(--rose-clay);">Claude is NOT...</h3>
+                <ul>
                     <li>A replacement for your expertise</li>
                     <li>Always accurate (always verify)</li>
                     <li>Appropriate for client data</li>
