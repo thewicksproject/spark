@@ -10,31 +10,31 @@
         {
           "title": "Write a Testimonial",
           "task": "Testimonials section",
-          "cmsSection": "Stories > Testimonials",
-          "prompt": "I'm updating the Reach for Youth website. I need to write a new testimonial for the testimonials section. Here's the format:\n- A quote (1-3 sentences, first person, from a parent/family)\n- A name (first name only or \"Parent of Teen Court participant\")\n- A role description\n\nThe testimonial should feel genuine and specific — not generic. It should reflect the real impact of RFY's youth mental health programs.\n\nHere's an example of an existing testimonial for tone reference:\n\"This program changed my life.\" — Parent, Teen Court participant's mother\n\nPlease draft 2-3 options for me to choose from."
+          "cmsSection": "Success Stories > Testimonials",
+          "prompt": "I'm updating the Reach for Youth website. I need to write a new testimonial for the testimonials section. The CMS has four fields — please provide all four:\n\n1. **Quote** — 1-3 sentences, first person, from a parent or family member\n2. **Name** — first name only, or a description like \"Parent of Teen Court participant\"\n3. **Role** — their relationship to RFY (e.g., \"Teen Court participant's mother\")\n4. **Initial** — a single letter for the avatar circle (use the first letter of the name)\n\nThe testimonial should feel genuine and specific — not generic. It should reflect the real impact of RFY's youth mental health programs.\n\nHere's an example of the format I need:\n- Quote: \"The counselors at RFY gave my son tools he still uses every day. We went from crisis to calm.\"\n- Name: Maria\n- Role: Parent of Teen Court participant\n- Initial: M\n\nPlease draft 2-3 options for me to choose from, each with all four fields."
         },
         {
           "title": "Update a Program Description",
           "task": "Program description",
-          "cmsSection": "Services > Mental Health or Restorative",
-          "prompt": "I'm updating the Reach for Youth website. I need to rewrite the description for our [Mental Health / Restorative Justice] program.\n\nHere's what the program does:\n- [Describe the program in your own words]\n- [Who it serves]\n- [What makes it unique]\n\nThe audience is parents and families visiting our website. Tone should be warm, professional, and hopeful — not clinical. Keep it under 150 words.\n\nPlease draft 2 versions for me to compare."
+          "cmsSection": "Services > Mental Health Services (or Restorative Justice Programs)",
+          "prompt": "I'm updating the Reach for Youth website. I need to rewrite the content for one of our programs in the CMS. The CMS has these fields for each service:\n\n**For Mental Health Services:**\n1. **Title** — the service name\n2. **Description** — a paragraph about the service (under 150 words)\n3. **Service Items** — a bullet list of specific offerings (e.g., \"Individual therapy for youth ages 6-17\")\n\n**For Restorative Justice Programs:**\n1. **Title** — the program name\n2. **Description** — a paragraph about the program (under 150 words)\n3. **Features** — a bullet list of key program components\n\nI'm updating our [Mental Health / Restorative Justice] program. Here's what it does:\n- [Describe the program in your own words]\n- [Who it serves]\n- [What makes it unique]\n\nAudience: parents and families. Tone: warm, professional, hopeful — not clinical.\n\nPlease draft the title, description paragraph, AND the list of service items/features. Give me 2 versions to compare."
         },
         {
           "title": "Update Impact Statistics",
           "task": "Homepage statistics",
-          "cmsSection": "Statistics",
-          "prompt": "I'm updating the Reach for Youth website statistics. I need to update the following numbers on the homepage:\n\n- Youth Served Annually: [new number]\n- Programs Offered: [new number]\n- Years of Service: [new number]\n- Volunteers: [new number]\n\nPlease format each as a short, impactful stat with a label. For example:\n\"950+ Youth Served Annually\"\n\nKeep the labels concise and consistent in style."
+          "cmsSection": "Statistics > Impact Statistics",
+          "prompt": "I'm updating the Reach for Youth website statistics. The CMS organizes stats into three groups, each with Number + Label pairs:\n\n**Hero Stats** (displayed prominently on the homepage):\n- [Number]: [Label] (e.g., \"950+\" / \"Youth Served Annually\")\n- [Number]: [Label]\n- [Number]: [Label]\n\n**Impact Stats** (program outcomes section):\n- [Number]: [Label]\n- [Number]: [Label]\n\n**Volunteer Stats** (volunteer section):\n- [Number]: [Label]\n- [Number]: [Label]\n\nHere are the numbers I want to update:\n- [Paste your updated numbers and what they measure]\n\nPlease format each stat as a Number and Label pair. Numbers should be punchy (use + or abbreviations like \"1.2K\"). Labels should be concise — 2-4 words max.\n\nTell me which group each stat belongs in (Hero, Impact, or Volunteer)."
         },
         {
-          "title": "Write a Staff Bio",
-          "task": "Staff profile",
-          "cmsSection": "People > Staff",
-          "prompt": "I'm adding a new staff member to the Reach for Youth website. Please write a professional bio based on this information:\n\n- Name: [Full name]\n- Title: [Job title]\n- Department: [Department]\n- Background: [Brief background — education, experience, what they're passionate about]\n\nKeep it to 2-3 sentences. Tone should be warm and professional — like introducing a colleague you respect. Write in third person."
+          "title": "Write a Volunteer Opportunity",
+          "task": "Volunteer section",
+          "cmsSection": "Volunteer Page > Volunteer Opportunities",
+          "prompt": "I'm adding a new volunteer opportunity to the Reach for Youth website. The CMS has two fields:\n\n1. **Title** — the name of the volunteer role\n2. **Details** — a bullet list of specifics about the role (what they'll do, time commitment, qualifications, etc.)\n\nHere's the role I want to add:\n- [Describe the volunteer role]\n- [Time commitment]\n- [Any requirements or ideal qualities]\n\nPlease draft the title and a list of 3-5 detail bullets. Tone should be welcoming and specific — make someone want to sign up. Avoid jargon.\n\nPlease draft 2 versions for me to choose from."
         },
         {
           "title": "Add a Timeline Entry",
           "task": "Organization history",
-          "cmsSection": "About > Timeline",
+          "cmsSection": "About Page > History Timeline",
           "prompt": "I'm adding a new milestone to the Reach for Youth website timeline. Here's the event:\n\n- Year: [Year]\n- What happened: [Describe the milestone]\n- Why it matters: [Why this was significant for RFY]\n\nPlease write a 1-2 sentence description that captures both what happened and why it mattered. Match the tone of a nonprofit celebrating its growth — proud but humble."
         }
       ]

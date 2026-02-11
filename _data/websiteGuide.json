@@ -35,7 +35,7 @@
     {
       "step": 3,
       "title": "Find your section",
-      "description": "The CMS has labeled sections matching the website. Navigate to the section you're updating (e.g., Stories > Testimonials, Services > Mental Health)."
+      "description": "The CMS has labeled sections matching the website. Navigate to the section you're updating (e.g., Success Stories > Testimonials, Services > Mental Health Services)."
     },
     {
       "step": 4,
@@ -50,14 +50,14 @@
   ],
   "sections": [
     { "name": "Statistics", "path": "Statistics", "description": "Homepage numbers — youth served, programs, volunteers" },
-    { "name": "Services", "path": "Services > Mental Health or Restorative", "description": "Program descriptions and details" },
-    { "name": "Staff", "path": "People > Staff", "description": "Staff bios and photos" },
-    { "name": "Board", "path": "People > Board", "description": "Board member profiles" },
-    { "name": "Testimonials", "path": "Stories > Testimonials", "description": "Parent and family testimonials" },
-    { "name": "Timeline", "path": "About > Timeline", "description": "Organization history milestones" },
-    { "name": "Partners", "path": "About > Partners", "description": "Community partner organizations" },
-    { "name": "Volunteers", "path": "Volunteer > Opportunities", "description": "Volunteer position descriptions" },
-    { "name": "Donation Levels", "path": "Donate > Impact", "description": "Giving levels and their impact" }
+    { "name": "Services", "path": "Services > Mental Health Services (or Restorative Justice Programs)", "description": "Program descriptions and details" },
+    { "name": "Staff", "path": "People > Staff Members", "description": "Staff names, titles, and photos" },
+    { "name": "Board", "path": "People > Board Members", "description": "Board member profiles" },
+    { "name": "Testimonials", "path": "Success Stories > Testimonials", "description": "Parent and family testimonials" },
+    { "name": "Timeline", "path": "About Page > History Timeline", "description": "Organization history milestones" },
+    { "name": "Partners", "path": "About Page > Funders & Partners", "description": "Community partner organizations" },
+    { "name": "Volunteers", "path": "Volunteer Page > Volunteer Opportunities", "description": "Volunteer position descriptions" },
+    { "name": "Donation Levels", "path": "Donate Page > Donation Impact Levels", "description": "Giving levels and their impact" }
   ],
   "troubleshooting": [
     {
