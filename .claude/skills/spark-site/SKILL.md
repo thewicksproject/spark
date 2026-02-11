@@ -22,7 +22,6 @@ Spark (spark.thewicksproject.org) is a training resource site built with Elevent
 | Resources | `/resources/` | `pages/resources.njk` |
 | Print Card | `/print-card/` | `pages/print-card.njk` |
 | One-Pager | `/one-pager/` | `pages/one-pager.njk` |
-| Email | `/email/` | `pages/email-presession.njk` |
 | Post-Session | `/post-session/` | `pages/post-session.njk` |
 
 ### Data Files (in `/_data/`)
@@ -72,7 +71,7 @@ wrangler pages deploy _site --project-name=spark --commit-dirty=true  # Manual d
 ```
 
 ## Design
-- **Colors:** Wicks palette (warm-white, golden-hour, meadow, charcoal)
+- **Colors:** Cool blue-gray neutrals (--warm-white: #F7F8FB, --cream: #ECEEF3, --mist: #DCDFE6) with golden-hour accents
 - **Typography:** Charter (serif headings), system-ui (body)
 - **Layout:** Base template in `_includes/base.njk`
 - **CSS:** Single file at `css/styles.css`
