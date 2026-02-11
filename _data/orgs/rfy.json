@@ -45,11 +45,11 @@
 
   "navigation": [
     { "label": "Home", "url": "/rfy/" },
-    { "label": "AI Boundaries", "url": "/rfy/boundaries/" },
-    { "label": "Getting Started", "url": "/rfy/getting-started/" },
+    { "label": "Boundaries", "url": "/rfy/boundaries/" },
+    { "label": "Get Started", "url": "/rfy/getting-started/" },
     { "label": "Prompts", "url": "/rfy/prompts/" },
     { "label": "Website Guide", "url": "/rfy/website-guide/" },
-    { "label": "CMS Walkthrough", "url": "/rfy/walkthrough/" },
+    { "label": "Walkthrough", "url": "/rfy/walkthrough/" },
     { "label": "Resources", "url": "/rfy/resources/" }
   ],
 
