@@ -36,8 +36,8 @@ eleventyComputed:
 
 <section>
     <div class="container">
-        <div class="section-label">Session Flow</div>
-        <h2>What We'll Cover</h2>
+        <div class="section-label">{{ org.sessionFlowLabel or "Session Flow" }}</div>
+        <h2>{{ org.sessionFlowHeading or "What We'll Cover" }}</h2>
         <div class="beats">
             {% for beat in org.session.beats %}
             <div class="beat">

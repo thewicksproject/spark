@@ -3,7 +3,9 @@
   "name": "RFY",
   "fullName": "Reach for Youth",
   "siteUrl": "https://rfy.thewicksproject.org",
-  "cmsUrl": "https://rfy.thewicksproject.org/admin/",
+
+  "sessionFlowLabel": "What's Here",
+  "sessionFlowHeading": "Your AI Toolkit",
 
   "session": {
     "title": "AI for Your Real Work",
@@ -12,33 +14,27 @@
     "beats": [
       {
         "number": 1,
-        "title": "Welcome",
-        "duration": "2 min",
-        "description": "Quick hello, agenda overview, and housekeeping."
+        "title": "Boundaries",
+        "duration": "Reference",
+        "description": "The traffic light framework — what's safe, what needs review, what's off-limits."
       },
       {
         "number": 2,
-        "title": "Boundaries",
-        "duration": "8 min",
-        "description": "The traffic light card — what's safe, what needs review, what's off-limits."
+        "title": "Getting Started",
+        "duration": "Setup",
+        "description": "Download Claude, write your first prompt, and see how the conversation works."
       },
       {
         "number": 3,
-        "title": "Watch This",
-        "duration": "10 min",
-        "description": "Live demo: updating the RFY website with Claude in real time."
+        "title": "Starter Prompts",
+        "duration": "Library",
+        "description": "Ready-to-use prompts for meetings, emails, grants, youth programs, and more."
       },
       {
         "number": 4,
-        "title": "Your Turn",
-        "duration": "35 min",
-        "description": "Everyone updates the RFY website — draft with Claude, publish through the CMS."
-      },
-      {
-        "number": 5,
-        "title": "Your Own Work",
-        "duration": "35 min",
-        "description": "Apply what you've learned to your own projects, then share what you built."
+        "title": "Resources",
+        "duration": "Learning",
+        "description": "Free courses, recommended tools, and the 4D framework for working with AI."
       }
     ]
   },
@@ -48,53 +44,20 @@
     { "label": "Boundaries", "url": "/rfy/boundaries/" },
     { "label": "Get Started", "url": "/rfy/getting-started/" },
     { "label": "Prompts", "url": "/rfy/prompts/" },
-    { "label": "Website Guide", "url": "/rfy/website-guide/" },
-    { "label": "Walkthrough", "url": "/rfy/walkthrough/" },
     { "label": "Resources", "url": "/rfy/resources/" }
   ],
 
   "quickLinks": [
     { "label": "RFY Demo Website", "url": "https://rfy.thewicksproject.org" },
-    { "label": "RFY Website CMS", "url": "https://rfy.thewicksproject.org/admin/" },
     { "label": "Claude Desktop Download", "url": "https://claude.ai/download" },
-    { "label": "GitHub Sign Up", "url": "https://github.com/signup" }
+    { "label": "AI Fluency for Nonprofits", "url": "https://anthropic.skilljar.com/ai-fluency-for-nonprofits" },
+    { "label": "Starter Prompts", "url": "/rfy/prompts/" }
   ],
 
   "prompts": {
     "title": "Starter Prompts",
     "subtitle": "Copy these into Claude to get started. Customize the details in [brackets].",
     "categories": [
-      {
-        "id": "website",
-        "name": "Website Updates",
-        "icon": "globe",
-        "prompts": [
-          {
-            "title": "Update a Program Description",
-            "task": "Program description",
-            "cmsSection": "Services > Mental Health Services (or Restorative Justice Programs)",
-            "prompt": "I'm updating the Reach for Youth website. I need to rewrite the content for one of our programs in the CMS. The CMS has these fields for each service:\n\nFor Mental Health Services:\n1. Title — the service name\n2. Description — a paragraph about the service (under 150 words)\n3. Service Items — a bullet list of specific offerings (e.g., \"Individual therapy for youth ages 6-17\")\n\nFor Restorative Justice Programs:\n1. Title — the program name\n2. Description — a paragraph about the program (under 150 words)\n3. Features — a bullet list of key program components\n\nI'm updating our [Mental Health / Restorative Justice] program. Here's what it does:\n- [Describe the program in your own words]\n- [Who it serves]\n- [What makes it unique]\n\nAudience: parents and families. Tone: warm, professional, hopeful — not clinical.\n\nPlease draft the title, description paragraph, AND the list of service items/features. Give me 2 versions to compare."
-          },
-          {
-            "title": "Update Impact Statistics",
-            "task": "Homepage statistics",
-            "cmsSection": "Statistics > Impact Statistics",
-            "prompt": "I'm updating the Reach for Youth website statistics. The CMS organizes stats into three groups, each with Number + Label pairs:\n\nHero Stats (displayed prominently on the homepage):\n- [Number]: [Label] (e.g., \"950+\" / \"Youth Served Annually\")\n- [Number]: [Label]\n- [Number]: [Label]\n\nImpact Stats (program outcomes section):\n- [Number]: [Label]\n- [Number]: [Label]\n\nVolunteer Stats (volunteer section):\n- [Number]: [Label]\n- [Number]: [Label]\n\nHere are the numbers I want to update:\n- [Paste your updated numbers and what they measure]\n\nPlease format each stat as a Number and Label pair. Numbers should be punchy (use + or abbreviations like \"1.2K\"). Labels should be concise — 2-4 words max.\n\nTell me which group each stat belongs in (Hero, Impact, or Volunteer)."
-          },
-          {
-            "title": "Write a Volunteer Opportunity",
-            "task": "Volunteer section",
-            "cmsSection": "Volunteer Page > Volunteer Opportunities",
-            "prompt": "I'm adding a new volunteer opportunity to the Reach for Youth website. The CMS has two fields:\n\n1. Title — the name of the volunteer role\n2. Details — a bullet list of specifics about the role (what they'll do, time commitment, qualifications, etc.)\n\nHere's the role I want to add:\n- [Describe the volunteer role]\n- [Time commitment]\n- [Any requirements or ideal qualities]\n\nPlease draft the title and a list of 3-5 detail bullets. Tone should be welcoming and specific — make someone want to sign up. Avoid jargon.\n\nPlease draft 2 versions for me to choose from."
-          },
-          {
-            "title": "Add a Timeline Entry",
-            "task": "Organization history",
-            "cmsSection": "About Page > History Timeline",
-            "prompt": "I'm adding a new milestone to the Reach for Youth website timeline. Here's the event:\n\n- Year: [Year]\n- What happened: [Describe the milestone]\n- Why it matters: [Why this was significant for RFY]\n\nPlease write a 1-2 sentence description that captures both what happened and why it mattered. Match the tone of a nonprofit celebrating its growth — proud but humble."
-          }
-        ]
-      },
       {
         "id": "meetings",
         "name": "Meeting Notes",
@@ -109,6 +72,11 @@
             "title": "Prepare Meeting Agenda",
             "task": "Pre-meeting prep",
             "prompt": "Help me create an agenda for a [type of meeting] with [who's attending].\n\nTopics to cover:\n- [Topic 1]\n- [Topic 2]\n- [Topic 3]\n\nThe meeting is [duration] long. Include time estimates for each item and leave 5 minutes at the end for action items. Put the most important topic first."
+          },
+          {
+            "title": "Board Update Prep",
+            "task": "Board meeting preparation",
+            "prompt": "Help me prepare a board update for Reach for Youth. I need to summarize what's happened since the last board meeting.\n\nKey updates:\n- [Program update or milestone]\n- [Staffing or organizational news]\n- [Financial or fundraising highlight]\n- [Upcoming priorities]\n\nFormat this as a 1-page executive summary with:\n- 3-4 bullet highlights at the top\n- A short narrative paragraph for each update\n- A \"Looking Ahead\" section with 2-3 priorities\n\nTone: confident, transparent, concise. Board members are busy — make it scannable."
           }
         ]
       },
@@ -126,6 +94,16 @@
             "title": "Follow-Up Email",
             "task": "Post-meeting follow-up",
             "prompt": "Draft a follow-up email after today's meeting about [topic].\n\nInclude:\n- Brief thank-you for attending\n- Summary of what we decided (2-3 bullet points)\n- Next steps with who's responsible\n- Deadline or next meeting date\n\nKeep it concise — people skim emails. Tone should be [friendly/formal/direct]."
+          },
+          {
+            "title": "Parent/Family Communication",
+            "task": "External family outreach",
+            "prompt": "Draft a letter or email to parents/families of youth in our [program name] program.\n\nPurpose: [What you need to communicate — schedule change, new offering, event invitation, etc.]\n\nKey details:\n- [Detail 1]\n- [Detail 2]\n- [Any action they need to take]\n\nTone: warm, respectful, clear. Many of our families have a lot going on — keep it short and put the most important info first. Include a clear next step. Avoid jargon.\n\nProvide an English version. Keep it under 250 words."
+          },
+          {
+            "title": "Funder Thank-You",
+            "task": "Donor/funder communication",
+            "prompt": "Draft a thank-you letter to a funder who supported our work.\n\nFunder: [Name or organization]\nGift/Grant: [Amount or type of support]\nWhat it funded: [Program or initiative]\nImpact: [What their support made possible — be specific]\n\nTone: genuine, specific, not generic. Show them exactly what their support did. Keep it under 300 words. Include a brief mention of what's ahead.\n\nThis is going on [letterhead / email / both] — format accordingly."
           }
         ]
       },
@@ -143,6 +121,16 @@
             "title": "Multi-Audience Rewrite",
             "task": "Adapt content for different readers",
             "prompt": "Here's our [program name] program description. Rewrite it three ways:\n1. For our website (parents are the audience)\n2. For a grant application (funders are the audience)\n3. For a staff recruitment posting (potential employees are the audience)\n\n[Paste description]\n\nKeep each version under 200 words. Adjust tone and emphasis for each audience."
+          },
+          {
+            "title": "Outcomes Narrative",
+            "task": "Grant reporting",
+            "prompt": "Help me write an outcomes narrative for a grant report.\n\nProgram: [Program name]\nGrant period: [Start — End]\nKey metrics:\n- [Metric 1: e.g., \"87 youth served\"]\n- [Metric 2: e.g., \"92% attendance rate\"]\n- [Metric 3: e.g., \"15 youth completed the full program\"]\n\nStory of impact: [Describe one success — no client names or identifying info]\n\nChallenges: [What was hard? What did you learn?]\n\nWrite 300-400 words. Lead with outcomes, weave in the story, be honest about challenges. Tone: evidence-based, reflective, professional.\n\nReminder: Do NOT include any client names, identifying details, or protected information."
+          },
+          {
+            "title": "Logic Model Summary",
+            "task": "Program planning",
+            "prompt": "Help me create a logic model summary for our [program name] program.\n\nInputs (what we invest): [Staff, funding, space, materials, etc.]\nActivities (what we do): [Direct services, workshops, outreach, etc.]\nOutputs (what we produce): [Number served, sessions delivered, etc.]\nShort-term outcomes: [Knowledge gained, skills built, connections made]\nLong-term outcomes: [Behavior change, system change, community impact]\n\nFormat this as a clean table or structured outline I can paste into a grant application or planning document. Keep descriptions concise — 1 sentence each."
           }
         ]
       },
@@ -160,118 +148,75 @@
             "title": "Create a One-Pager",
             "task": "Program summary",
             "prompt": "Create a one-page summary of our [program/initiative]. Include:\n- What it is (2-3 sentences)\n- Who it serves\n- Key outcomes/impact (use numbers if available)\n- How to get involved or learn more\n\nThis will be shared with [audience]. Make it scannable — use headers and bullet points. Keep it to one page when printed.\n\nHere's the information to work from:\n[Paste your content]"
+          },
+          {
+            "title": "Program Data Summary",
+            "task": "Data presentation",
+            "prompt": "Help me summarize this program data for a [report / presentation / board meeting].\n\nProgram: [Program name]\nTime period: [Quarter / year]\nRaw data:\n- [Paste numbers, stats, or data points]\n\nI need:\n- 3-5 key takeaways (plain language, not jargon)\n- A suggested format for presenting the data (table, chart type, etc.)\n- 1-2 sentences explaining what the data means for our program\n\nAudience: [Who will read this — board, funders, staff, etc.]. Make the numbers tell a story."
+          }
+        ]
+      },
+      {
+        "id": "youth-programs",
+        "name": "Youth Programs",
+        "icon": "users",
+        "prompts": [
+          {
+            "title": "Workshop Curriculum Outline",
+            "task": "Youth workshop planning",
+            "prompt": "Help me outline a [number]-session workshop for youth ages [age range].\n\nTopic: [Life skills, conflict resolution, career readiness, etc.]\nGoal: [What should participants walk away with?]\nFormat: [In-person / virtual / hybrid]\nSession length: [Duration per session]\n\nFor each session, include:\n- Session title\n- Learning objective (1 sentence)\n- 2-3 key activities\n- Materials needed\n\nTone: engaging, youth-friendly, culturally responsive. Activities should be interactive — minimal lecture.\n\nNote: Do not include any real youth names or identifying information."
+          },
+          {
+            "title": "Restorative Justice Circle Prep",
+            "task": "RJ circle facilitation prep",
+            "prompt": "Help me prepare for a restorative justice circle.\n\nType of circle: [Community building / responsive / reintegration / celebration]\nParticipants: [General description — e.g., \"8 high school students\" — no names]\nGoal: [What this circle aims to accomplish]\nTime available: [Duration]\n\nPlease create:\n- An opening ceremony/check-in prompt\n- 3-4 circle questions that build from surface to depth\n- A suggested centerpiece or talking piece protocol\n- A closing reflection prompt\n\nTone: trauma-informed, respectful, youth-appropriate. Questions should invite sharing without pressuring.\n\nReminder: Do NOT include any participant names or identifying details."
+          },
+          {
+            "title": "Training Materials for Staff/Volunteers",
+            "task": "Staff and volunteer training",
+            "prompt": "Help me create training materials for [staff / volunteers] who will be working with youth in our [program name] program.\n\nTraining topic: [De-escalation, mandated reporting basics, program orientation, etc.]\nAudience: [New hires / seasoned staff / volunteers with no prior experience]\nFormat: [In-person training / handout / self-paced guide]\nTime: [How long the training session or reading should take]\n\nInclude:\n- Key concepts (plain language, no jargon)\n- 2-3 scenarios for discussion or role-play\n- A quick-reference summary they can keep\n\nTone: practical, supportive, clear. Assume good intentions but no prior training.\n\nNote: Use only hypothetical scenarios — no real client or staff information."
+          }
+        ]
+      },
+      {
+        "id": "community",
+        "name": "Community & Partnerships",
+        "icon": "handshake",
+        "prompts": [
+          {
+            "title": "Community Partner Outreach",
+            "task": "Partnership development",
+            "prompt": "Draft an outreach email or letter to a potential community partner.\n\nPartner organization: [Name and what they do]\nWhat we're proposing: [Partnership idea — co-hosted event, referral pathway, joint program, etc.]\nWhy them: [What makes this a good fit]\nWhat we bring: [Our strengths, resources, or capacity]\nWhat we're asking: [Specific next step — meeting, call, site visit]\n\nTone: professional, collaborative, not transactional. We want a relationship, not just a transaction. Keep it under 300 words.\n\nProvide 2 versions: one formal (for a new contact) and one warm (for someone we've worked with before)."
+          },
+          {
+            "title": "Event/Program Promotion",
+            "task": "Community-facing outreach",
+            "prompt": "Help me write promotional copy for an upcoming [event / program / initiative].\n\nWhat: [Name and brief description]\nWho it's for: [Target audience]\nWhen: [Date and time]\nWhere: [Location or virtual link]\nWhy it matters: [The value for attendees]\nHow to sign up: [Registration link or contact info]\n\nI need:\n1. A short blurb for social media (under 100 words)\n2. A longer description for email or flyer (150-200 words)\n3. A suggested subject line for email\n\nTone: welcoming, community-oriented, clear. Avoid nonprofit jargon."
+          }
+        ]
+      },
+      {
+        "id": "clinical-admin",
+        "name": "Clinical Admin",
+        "icon": "shield",
+        "prompts": [
+          {
+            "title": "Policy & Procedure Drafting",
+            "task": "Clinical policy documents",
+            "prompt": "Help me draft or update a policy/procedure document for our clinical program.\n\nPolicy topic: [Intake procedures, safety protocols, confidentiality practices, telehealth guidelines, etc.]\nCurrent version: [Paste existing text, or describe what exists]\nWhat needs to change: [New requirements, updated regulations, process improvements]\nRegulatory context: [Any specific standards — HIPAA, state licensing, accreditation body, etc.]\n\nFormat the policy with:\n- Purpose statement\n- Scope (who it applies to)\n- Procedure steps (numbered)\n- Responsibilities (who does what)\n- Review date\n\nTone: clear, precise, professional. This will be in our policy manual.\n\nIMPORTANT: Do NOT include any client names, case details, or protected health information. This is for the policy document itself — not for any specific client situation."
+          },
+          {
+            "title": "Session Note Template Builder",
+            "task": "Clinical documentation templates",
+            "prompt": "Help me create a blank session note template for [type of session — individual therapy, group session, family session, intake assessment, etc.].\n\nOur program: [Brief description of clinical program]\nRequired elements: [What your organization or funder requires in notes — e.g., treatment goals addressed, interventions used, client response, plan]\nFormat preference: [SOAP, DAP, narrative, or custom]\n\nCreate a clean, fillable template with:\n- Labeled sections with brief instructions for the clinician\n- Placeholder prompts (e.g., \"Describe interventions used...\")\n- Space for signatures and dates\n\nIMPORTANT: This is a BLANK TEMPLATE only. Do NOT include any sample client data, names, diagnoses, or protected health information. The template should contain only structural elements and instructional placeholders."
+          },
+          {
+            "title": "Staff Supervision Agenda / Clinical Meeting Prep",
+            "task": "Supervision and clinical meetings",
+            "prompt": "Help me prepare an agenda for a [clinical supervision session / team meeting / case consultation meeting].\n\nMeeting type: [Individual supervision, group supervision, clinical team meeting]\nFrequency: [Weekly, biweekly, monthly]\nTypical attendees: [Roles — e.g., \"clinical director + 4 therapists\"]\nTopics to cover:\n- [Topic 1 — e.g., documentation compliance review]\n- [Topic 2 — e.g., training on new assessment tool]\n- [Topic 3 — e.g., team wellness check-in]\n\nDuration: [Meeting length]\n\nCreate an agenda with:\n- Time allocations for each item\n- Discussion prompts or guiding questions\n- Space for action items and follow-ups\n\nTone: structured but supportive. Supervision should feel productive, not punitive.\n\nIMPORTANT: Do NOT include any client names, case details, or identifiable information. This is for administrative planning only — no case-specific content."
           }
         ]
       }
-    ]
-  },
-
-  "websiteGuide": {
-    "title": "Website Update Guide",
-    "overview": "The workflow has two parts: draft content with Claude, then publish it through the CMS. No coding, no terminal, no technical skills required.",
-    "prerequisites": [
-      {
-        "step": "GitHub account",
-        "detail": "Sign up free at github.com/signup. This is your login for the CMS.",
-        "url": "https://github.com/signup"
-      },
-      {
-        "step": "Collaborator access",
-        "detail": "Victor adds you to the website repository. You'll get an email invitation — accept it.",
-        "url": null
-      },
-      {
-        "step": "Claude Desktop",
-        "detail": "Download at claude.ai/download. This is where you draft content.",
-        "url": "https://claude.ai/download"
-      }
-    ],
-    "workflow": [
-      {
-        "step": 1,
-        "title": "Draft with Claude",
-        "description": "Open Claude Desktop. Copy a starter prompt from the Prompts page. Paste it in, customize the details, and iterate until you're happy with the output."
-      },
-      {
-        "step": 2,
-        "title": "Open the CMS",
-        "description": "Go to the CMS in your browser. Click \"Login with GitHub\" and authorize access. First time? You may also need to grant org access — see Troubleshooting below."
-      },
-      {
-        "step": 3,
-        "title": "Find your section",
-        "description": "The CMS has labeled sections matching the website. Navigate to the section you're updating."
-      },
-      {
-        "step": 4,
-        "title": "Paste and publish",
-        "description": "Paste Claude's output into the form fields. Review it one more time. Click Publish."
-      },
-      {
-        "step": 5,
-        "title": "See it live",
-        "description": "Refresh the website. Your changes should appear within 30-60 seconds."
-      }
-    ],
-    "sections": [
-      { "name": "Statistics", "path": "Statistics", "description": "Homepage numbers — youth served, programs, volunteers" },
-      { "name": "Services", "path": "Services > Mental Health Services (or Restorative Justice Programs)", "description": "Program descriptions and details" },
-      { "name": "Staff", "path": "People > Staff Members", "description": "Staff names, titles, and photos" },
-      { "name": "Board", "path": "People > Board Members", "description": "Board member profiles" },
-      { "name": "Testimonials", "path": "Success Stories > Testimonials", "description": "Parent and family testimonials" },
-      { "name": "Timeline", "path": "About Page > History Timeline", "description": "Organization history milestones" },
-      { "name": "Partners", "path": "About Page > Funders & Partners", "description": "Community partner organizations" },
-      { "name": "Volunteers", "path": "Volunteer Page > Volunteer Opportunities", "description": "Volunteer position descriptions" },
-      { "name": "Donation Levels", "path": "Donate Page > Donation Impact Levels", "description": "Giving levels and their impact" }
-    ],
-    "troubleshooting": [
-      {
-        "problem": "CMS won't load or shows a blank page",
-        "solution": "Try a different browser (Chrome works best). Clear cache and try again."
-      },
-      {
-        "problem": "GitHub login fails",
-        "solution": "Make sure you accepted the collaborator invitation email. Check spam. Try incognito mode."
-      },
-      {
-        "problem": "Changes aren't showing on the website",
-        "solution": "Wait 30-60 seconds, then hard refresh (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows)."
-      },
-      {
-        "problem": "Got an error when publishing",
-        "solution": "If someone else published at the same time, wait 30 seconds and try again."
-      },
-      {
-        "problem": "Published the wrong content",
-        "solution": "Don't worry — Victor can revert any change. Just let him know."
-      },
-      {
-        "problem": "Publish fails or CMS is read-only",
-        "solution": "Go to GitHub Settings → Applications → 'RFY Website CMS' → click 'Grant' for thewicksproject. Log out of the CMS and back in."
-      }
-    ]
-  },
-
-  "walkthrough": {
-    "intro": "This page walks through the exact steps to update the RFY website. Each section shows what you'll see and what to do. The full loop takes about 5 minutes.",
-    "examplePrompt": "I'm updating the Reach for Youth volunteer page. I need to add a new volunteer opportunity to the CMS.\n\nThe CMS has these fields for each opportunity:\n1. Title — the role name\n2. Details — 3-5 bullet points (what they'll do, time commitment, qualifications)\n\nNew role to add:\n- Youth Workshop Facilitator\n- Saturday mornings, twice per month\n- Leading life-skills workshops for teens 13-17\n- No experience needed, training provided\n\nWrite the title and 3 detail bullets. Welcoming tone. Draft 2 versions so I can pick my favorite.",
-    "cmsSections": [
-      { "name": "Statistics", "contents": "Impact Statistics", "page": "Homepage numbers" },
-      { "name": "People", "contents": "Staff Members, Board Members", "page": "About Us" },
-      { "name": "About Page", "contents": "History Timeline, Funders & Partners", "page": "About Us" },
-      { "name": "Volunteer Page", "contents": "Volunteer Opportunities", "page": "Volunteer" },
-      { "name": "Donate Page", "contents": "Donation Impact Levels", "page": "Donate" },
-      { "name": "Success Stories", "contents": "Testimonials", "page": "Success Stories" },
-      { "name": "Services", "contents": "Mental Health Services, Restorative Justice Programs", "page": "Our Services" }
-    ],
-    "verificationDate": "February 11, 2026",
-    "verificationChecks": [
-      { "check": "CMS login via GitHub OAuth", "result": "Verified — login, read, and write all working" },
-      { "check": "CMS sidebar labels match Website Guide", "result": "Verified — all 7 sidebar collections verified against CMS" },
-      { "check": "Publish volunteer opportunity via CMS", "result": "Verified — \"Youth Workshop Facilitator\" published and appeared on live site" },
-      { "check": "Starter prompts produce CMS-ready output", "result": "Verified — statistics, timeline, volunteer, and program description prompts all map to CMS fields" },
-      { "check": "All Spark site pages render correctly", "result": "Verified — all 8 pages pass visual check" },
-      { "check": "Test content reverted", "result": "Verified — live site restored to baseline" }
     ]
   },
 
@@ -282,27 +227,27 @@
         "code": "Summarize these notes. Pull out:\n- Key decisions\n- Action items with owners\n- Open questions\n[paste notes]"
       },
       {
-        "title": "Draft an email",
-        "code": "Draft an internal email about [topic].\nTone: professional but warm.\nUnder 200 words. Clear ask at the end."
+        "title": "Write a parent letter",
+        "code": "Draft a letter to families about [topic].\nWarm, clear, under 250 words.\nMost important info first.\nClear next step at the end."
       },
       {
-        "title": "Add a volunteer opportunity (website)",
-        "code": "Add a volunteer role to the RFY website.\nTitle and 3-5 detail bullets (what they'll\ndo, time, qualifications). Welcoming tone.\nDraft 2 versions."
+        "title": "Draft grant outcomes",
+        "code": "Write a grant outcomes narrative.\nProgram: [name]. Metrics: [list].\nLead with results, include one\nsuccess story (no names). 300 words."
       },
       {
         "title": "Rewrite for different audiences",
         "code": "Rewrite this three ways:\n1. For our website (parents)\n2. For a grant application (funders)\n3. For staff recruitment\n[paste content]"
       },
       {
-        "title": "Update a program description (website)",
-        "code": "Rewrite our [program] for the website. Include title, description (under 150 words), and a list of service items. Warm, hopeful. Draft 2 versions.",
+        "title": "Plan a youth workshop",
+        "code": "Outline a [number]-session workshop for youth ages [range].\nTopic: [topic]. For each session: title, objective,\n2-3 activities, materials. Interactive, minimal lecture.\nNo real names or identifying info.",
         "fullWidth": true
       }
     ],
     "links": [
       { "label": "AI Fluency for Nonprofits", "url": "https://anthropic.skilljar.com/ai-fluency-for-nonprofits" },
       { "label": "Claude 101", "url": "https://anthropic.skilljar.com/claude-101" },
-      { "label": "Website CMS", "url": "https://rfy.thewicksproject.org/admin/" },
+      { "label": "Starter Prompts", "url": "https://spark.thewicksproject.org/rfy/prompts/" },
       { "label": "Training Resources", "url": "https://spark.thewicksproject.org" }
     ]
   }

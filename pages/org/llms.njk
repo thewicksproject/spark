@@ -19,7 +19,6 @@ eleventyComputed:
 - Duration: {{ org.session.duration | safe }}
 - Audience: {{ org.session.audience | safe }}
 - Website: {{ org.siteUrl }}
-- CMS: {{ org.cmsUrl }}
 
 ## Session Structure
 {% for beat in org.session.beats %}
@@ -56,11 +55,6 @@ Yellow Zone Process:
 {% for step in boundaries.incident.steps %}{{ loop.index }}. {{ step | safe }}
 {% endfor %}{{ boundaries.incident.note | safe }}
 
-## CMS Workflow
-{% for step in org.websiteGuide.workflow %}
-{{ step.step }}. {{ step.title | safe }} — {{ step.description | safe }}
-{%- endfor %}
-
 ## Available Starter Prompts
 {% for category in org.prompts.categories %}
 ### {{ category.name | safe }}
@@ -72,7 +66,6 @@ Yellow Zone Process:
 
 - Spark training site: https://spark.thewicksproject.org/{{ org.slug }}/
 - {{ org.fullName | safe }} website: {{ org.siteUrl }}
-- CMS: {{ org.cmsUrl }}
 - Claude Desktop download: https://claude.ai/download
 - AI Fluency for Nonprofits course: https://anthropic.skilljar.com/ai-fluency-for-nonprofits
 
