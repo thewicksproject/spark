@@ -58,13 +58,14 @@ Yellow Zone Process:
 ## Available Starter Prompts
 {% for category in org.prompts.categories %}
 ### {{ category.name | safe }}
-{% for prompt in category.prompts %}- {{ prompt.title | safe }}{% if prompt.cmsSection %} (CMS: {{ prompt.cmsSection | safe }}){% endif %}
+{% for prompt in category.prompts %}- {{ prompt.title | safe }}
 {% endfor %}
 {%- endfor %}
 
 ## Key URLs
 
 - Spark training site: https://spark.thewicksproject.org/{{ org.slug }}/
+- Starter prompts: https://spark.thewicksproject.org/{{ org.slug }}/prompts/
 - {{ org.fullName | safe }} website: {{ org.siteUrl }}
 - Claude Desktop download: https://claude.ai/download
 - AI Fluency for Nonprofits course: https://anthropic.skilljar.com/ai-fluency-for-nonprofits

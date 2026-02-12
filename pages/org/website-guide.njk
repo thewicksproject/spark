@@ -9,6 +9,7 @@ eleventyComputed:
   permalink: "/{{ org.slug }}/website-guide/"
 ---
 
+{% if org.websiteGuide %}
 <div class="page-header">
     <div class="container">
         <h1>{{ org.websiteGuide.title }}</h1>
@@ -100,3 +101,4 @@ eleventyComputed:
         </div>
     </div>
 </section>
+{% endif %}

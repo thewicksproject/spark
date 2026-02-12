@@ -77,10 +77,6 @@
     {
       "label": "Claude Desktop Download",
       "url": "https://claude.ai/download"
-    },
-    {
-      "label": "GitHub Sign Up",
-      "url": "https://github.com/signup"
     }
   ]
 }

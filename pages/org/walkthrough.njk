@@ -9,6 +9,7 @@ eleventyComputed:
   permalink: "/{{ org.slug }}/walkthrough/"
 ---
 
+{% if org.walkthrough %}
 <div class="page-header">
     <div class="container">
         <h1>CMS Walkthrough</h1>
@@ -219,7 +220,7 @@ eleventyComputed:
             </div>
             <div class="tip-card">
                 <div class="tip-badge" style="background: #FFEBEE; color: #C62828;">!</div>
-                <h4>GitHub login fails</h4>
+                <h4>Login fails</h4>
                 <p>Make sure you accepted the collaborator invitation email. Check spam folder.</p>
             </div>
             <div class="tip-card">
@@ -235,7 +236,7 @@ eleventyComputed:
             <div class="tip-card">
                 <div class="tip-badge" style="background: #FFEBEE; color: #C62828;">!</div>
                 <h4>Publish fails or read-only</h4>
-                <p>Go to <a href="https://github.com/settings/applications" target="_blank">GitHub Settings &rarr; Applications</a> &rarr; "RFY Website CMS" &rarr; click <strong>"Grant"</strong> for thewicksproject. Log out and back in.</p>
+                <p>You may need to grant organization access. Log out of the CMS and back in. If it persists, contact Victor.</p>
             </div>
         </div>
     </div>
@@ -267,4 +268,5 @@ eleventyComputed:
         </div>
     </div>
 </section>
+{% endif %}
 {% endif %}
